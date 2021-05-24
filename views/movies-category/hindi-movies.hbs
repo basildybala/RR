@@ -1,0 +1,29 @@
+ <div class="black-header">
+      <i class="material-icons">movie</i>
+      Hindi Movies
+    </div>
+
+    <table class="table-upcoming-list">
+      <tr class="wrap">
+        {{#each movies}}
+
+          <td class="up-listt">
+            
+            <div class="movie-mega-card">
+              <a href="/movie/{{this._id}}">
+                <div class="movie-card">
+                  <img src="/images/movie-posters/{{this._id}}.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="movie-card-title">{{this.name}}</h5>
+                    <span class="movie-card-info"><h5>{{this.releasedate}}</h5></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </td>
+
+        {{/each}}
+      </tr>
+
+    </table>
+ 

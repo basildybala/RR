@@ -1,0 +1,29 @@
+<section>
+
+  
+    <div class="black-header">
+      <i class="material-icons">movie</i>
+      Malayalam Movies
+    </div>
+
+    
+      <div class="movies-section">
+        {{#each malayalamMovies}}
+          <a href="/movie/{{this._id}}" class="movies-list">
+            <div class="movies-img">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="" srcset="">
+            </div>
+          <div class="movies-body">
+            <p>{{this.name}}</p>
+          </div>  
+          
+          </a>
+        {{/each}}
+      </div>
+
+
+  
+
+</section>
+
+

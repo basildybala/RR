@@ -1,0 +1,156 @@
+
+    <div class="main">
+      <div class="movie-img">
+        <img data-src="/images/movie-posters/{{movie._id}}.jpg" class="backimg lazy-photo" alt="" />
+        <img data-src="/images/movie-posters/{{movie._id}}.jpg" class="movie-cover lazy-photo" alt="" />
+        <a href="#" class="trailor-btn">
+        <div class="fa-trailor">    {{#if movie.yttrailorlink}}
+        <p> Watch Trailor</p>
+         
+        {{else}}
+        <p> Trailor Notyet</p>
+        {{/if}}</div>
+        <i class="fa fa-play "> <i class="material-icons">play_circle_filled</i> </i></a>
+        <div class="video-container">
+          <span class="close"> &#10006; </span>
+          
+          <iframe  class="lazy-photo" data-src="{{movie.yttrailorlink}}" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      </div>
+      <h6>{{movie.name}}</h6>
+       <div class="head11">
+       <div class="head111"><p>Release Date</p></div>
+        <div class="head111"><p>Language</p></div>
+         <div class="head111"><p>Genre</p></div>
+        
+      </div>
+      <div class="head11">
+       <div class="head1111">{{#if movie.releasedate}} <p>{{movie.releasedate}}</p>{{else}}
+       <p>Date Not Confirm</p>
+       {{/if}}
+       </div>
+        <div class="head1111"><p>{{movie.category}}</p></div>
+         <div class="head1111"><p>{{movie.genre}}</p></div>
+        
+      </div>
+      
+     
+      <!----------------Actors-->
+      <div class="basic-head"><h4>Actors</h4></div>
+      <div class="actor-section">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="actor">
+                <a href="#" class="actor-a">
+                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                  <p>Tovino Thomas</p>
+                </a>
+                <a href="#" class="actor-a">
+                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                  <p>Tovino Thomas</p>
+                </a>
+                <a href="#" class="actor-a">
+                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                  <p>Tovino Thomas</p>
+                </a>
+                <a href="#" class="actor-a">
+                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                  <p>Tovino Thomas</p>
+                </a>
+              </div>
+                 
+            </div>
+             <div class="swiper-slide">
+              
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="mv-details-section">
+        
+          <div class="head11">
+       <div class="head111"><p>Length</p></div>
+        <div class="head111"><p>Director</p></div>
+         <div class="head111"><p>producedby</p></div>
+        
+      </div>
+      <div class="head11">
+       <div class="head1111"><p>{{movie.duration}}</p></div>
+        <div class="head1111"><p>{{movie.director}}</p></div>
+         <div class="head1111"><p>{{movie.producedby}}</p></div>
+        
+      </div>
+      
+      
+        <div class="story">
+          <div class="story-h"><p>Story:</p></div>
+          <span class="story-p">
+            <p>
+                {{movie.story}}
+              good Film Contrary to popular belief, Lorem Ipsum is not simply <br>
+              random text. It has roots in a piece of classical Latin literature <br>
+              from 45 BC, making it over 2000 years old. Richard McClintock, a <br>
+              {{!-- Latin professor at Hampden-Sydney College in Virginia, looked up
+              one of the more obscure Latin words, consectetur, from a Lorem
+              Ipsum passage, and going through the cites of the word in
+              classical literature, discovered the undoubtable source. Lorem
+              Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+              Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+              written in 45 BC. This book is a treatise on the theory of ethics,
+              very popular during the Renaissance. The first line of Lorem
+              Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+              section 1.10.32. The standard chunk of Lorem Ipsum used since the
+              1500s is reproduced below for those interested. Sections 1.10.32
+              and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+              also reproduced in their exact original form, accompanied by
+              English versions from the 1914 translation by H. Rackham. --}}
+            </p>
+            <a href="javascript:void();" class="readmore-btn">Read more</a>
+          </span>
+        </div>
+      </div>
+      <div class="basic-head"><h4>Images</h4> </div>
+      <div class="image-section">
+        <div class="swiper-containerr">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="movie-images">
+                  <a href="#">
+                    <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                   
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="movie-images">
+                  <a href="#">
+                    <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
+                   
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+      
+      
+     
+    </div>
+    
+    
+   
+   
+     
+
+   
+    
+
+  
+

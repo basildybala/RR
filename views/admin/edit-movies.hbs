@@ -1,0 +1,78 @@
+<div class="add-movies-section">
+    <div class="add-movies-form">
+        <div class="black-header">Edit Movies</div>
+        <div class="add-movies-form-section">
+            <form action="/admin/edit-movies/{{movie._id}}" class="movies-form" enctype="multipart/form-data" method="POST">
+                <div class="input-section">
+                    <label class="fm-details">
+                        Movie Name :</label>
+                            <input type="text" name="name" value="{{movie.name}}" required>
+
+                </div>
+                <div class="input-section"  >
+                    <label class="fm-details">
+                        Category :</label>
+                    <select name="category"  >
+                         <option value="{{movie.category}}">{{movie.category}}</option>
+                        <option value="malayalam">Malayalam</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="telugu">Telugu</option>
+                        <option value="hollywood">Hollywood</option>
+                        <option value="other">Other</option>
+                        <option value="webseries">Web series</option>
+                    </select>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Release Date : </label>
+                    <input type="text" name="releasedate" value="{{movie.releasedate}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Dirctor : </label>
+                    <input type="text" name="director" value="{{movie.director}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Produced By :</label>
+                    <input type="text" name="producedby" value="{{movie.producedby}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Genre : </label>
+                    <input type="text" name="genre" value="{{movie.genre}}"  > 
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Duration : </label>
+                    <input type="text" name="duration" value="{{movie.duration}}" > 
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Story : </label>
+                    <input type="text" name="story" value="{{movie.story}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Youtube trailer Link : </label>
+                    <input type="text" name="yttrailorlink" value="{{movie.yttrailorlink}}" >
+                </div>
+                <img src="/images/movie-posters/{{movie._id}}.jpg" style="width: 100px;" id="viewposter">
+                <div class="input-section">
+                     <label class="fm-details">
+                        Movie Poster : </label>
+                    <input type="file" name="image" onchange="posterView(event)" >
+                </div>
+                <button type="submit">Edit Movie</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function posterView(event){
+        document.getElementById(viewposter).src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

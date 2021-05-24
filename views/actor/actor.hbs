@@ -1,0 +1,48 @@
+<div class="actor-section">
+        <div class="black-headerr">{{actor.actorname}}</div>
+        <div class="actor-two">
+            <div class="actor-image">
+                <img src="/images/actor-posters/{{actor._id}}.jpg" alt="">
+            </div>
+            <div class="actor-details">
+                <div class="mv-details">
+                    <h4>Name :</h4>  <h5>{{actor.actorname}}</h5>
+                </div>
+                <div class="mv-details">
+                    <h4>Age :</h4> {{#if actor.age}}
+        <h5>{{actor.age}}</h5>
+        {{else}}
+        <h5> Not Show</h5>
+        {{/if}} 
+                </div>
+                <div class="mv-details">
+                    <h4>Year Active :</h4>  <h5>{{actor.yearactive}}</h5>
+                </div>
+                <div class="mv-details">
+                    <h4>Language :</h4>  <h5>{{actor.language}}</h5>
+                </div>
+                <div class="mv-details">
+                    <h4>Occupation :</h4>  <h5>{{actor.occupation}}</h5>
+                </div>
+                <div class="connect-with">
+                    <h4>Connect with :</h4> <a href="{{actor.instalink}}"> <img src="/images/other/instagram-png.png" alt=""> </a>
+                    <a href="{{actor.twitlink}}"> <img src="/images/other/twitter (1).png" alt=""> </a>
+                </div>
+                <div class="mv-details">
+                    <h4>Biography :</h4>  <h5>{{actor.biography}}</h5>
+                </div>
+            </div>
+            
+        </div>
+        
+      <div class="video-section">
+        <div class="video-yt">
+          <h4 class="movies-header-h4"><i class="material-icons"> movie</i>Filmography</h4>
+        </div>
+      </div>
+      <div class="video-section">
+        <div class="video-yt">
+          <h4 class="movies-header-h4"><i class="material-icons"> image</i>Images</h4>
+        </div>
+      </div>
+    </div>

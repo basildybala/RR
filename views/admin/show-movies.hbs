@@ -1,0 +1,24 @@
+
+<table style="width:100%;text-align:left">
+  <tr >
+    <th class="admin-header">Actor Name</th>
+    <th class="admin-header"> Language</th>
+    <th class="admin-header"> Options</th>
+  </tr>
+  {{#each movies}}
+  <tr>
+    <td class="td-class">{{this.name}}</td>
+    <td class="td-class">{{this.category}}</td>
+    <td class="td-class">
+      
+        <a style="color: green;" href="/admin/edit-movies/{{this._id}}"> <i class="material-icons">
+edit
+</i>Edit</a>
+        <a href="/admin/delete-movies/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.actorname}}')"><i class="material-icons">
+delete
+</i>Delete</a>
+        
+        </td>
+  </tr>
+  {{/each}}
+</table>

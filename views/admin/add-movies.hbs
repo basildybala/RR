@@ -1,0 +1,101 @@
+<div class="add-movies-section">
+    <div class="add-movies-form">
+        <div class="black-header">Add Movies</div>
+        <div class="add-movies-form-section">
+            <form action="/admin/add-movies" class="movies-form" enctype="multipart/form-data" method="POST">
+                <div class="input-section">
+                    <label class="fm-details">
+                        Movie Name :</label>
+                            <input type="text" name="name" required>
+
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Category :</label>
+                    <select name="category">
+                        <option value="malayalam">Malayalam</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="telugu">Telugu</option>
+                        <option value="hollywood">Hollywood</option>
+                        <option value="other">Other</option>
+                        <option value="webseries">Web series</option>
+                    </select>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Release Date : </label>
+                    <input type="text" name="releasedate" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Dirctor : </label>
+                    <input type="text" name="director" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Produced By :</label>
+                    <input type="text" name="producedby" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Genre : </label>
+                    <input type="text" name="genre"  > 
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Duration : </label>
+                    <input type="text" name="duration"  > 
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Story : </label>
+                    <input type="text" name="story" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Youtube trailer Link : </label>
+                    <input type="text" name="yttrailorlink" >
+                </div>
+                <img src="" style="width: 100px;" id="prodimage1">
+                <div class="input-section">
+                     <label class="fm-details">
+                        Movie Poster : </label>
+                    <input type="file" name="image" onchange="viewImage(event,'image1')" >
+                </div>
+                 
+                <div class="input-section">
+                    <label class="fm-details">
+                        ActroID 1 : </label>
+                    <input type="text" name="actid1" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        ActroID 2 : </label>
+                    <input type="text" name="actid2" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        ActroID 3 : </label>
+                    <input type="text" name="actid3" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        ActroID 4: </label>
+                    <input type="text" name="actid4" >
+                </div>
+                  <div class="input-section">
+                    <label class="fm-details">
+                        Youtube Links: </label>
+                    <input type="text" name="ytlink" >
+                    <input type="text" name="ytlink1" >
+                    <input type="text" name="ytlink2" >
+                    <input type="text" name="ytlink3" >
+                    
+                </div>
+                <button type="submit">Movie Add</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

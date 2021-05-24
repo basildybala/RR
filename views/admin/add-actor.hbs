@@ -1,0 +1,66 @@
+<div class="add-movies-section">
+    <div class="add-movies-form">
+        
+        <div class="add-movies-form-section">
+            <form action="/admin/add-actor" class="movies-form" enctype="multipart/form-data" method="POST">
+                <div class="input-section">
+                    <label class="fm-details">
+                        Actor Name :</label>
+                            <input type="text" name="actorname" required>
+
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Language :</label>
+                    <select name="language">
+                        <option value="malayalam">Malayalam</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="telugu">Telugu</option>
+                        <option value="hollywood">Hollywood</option>
+                        <option value="other">Other</option>
+                        <option value="webseries">Web series</option>
+                    </select>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Age : </label>
+                    <input type="text" name="age" required>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Year Active : </label>
+                    <input type="text" name="yearactive" required>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Occupation :</label>
+                    <input type="text" name="occupation" required>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Instagram Link : </label>
+                    <input type="text" name="instalink" required>
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Twitter Link : </label>
+                    <input type="text" name="twitlink" required>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Biography : </label>
+                    <input type="text" name="biography" required>
+                </div>
+                <img src="" style="width: 100px;" id="prodimage1">
+                <div class="input-section">
+                     <label class="fm-details">
+                        Movie Poster : </label>
+                    <input type="file" name="image" onchange="viewImage(event,'image1')" required>
+                </div>
+                <button type="submit">Add Actor</button>
+               
+            </form>
+        </div>
+    </div>
+</div>

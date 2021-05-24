@@ -1,0 +1,67 @@
+<div class="add-movies-section">
+    <div class="add-movies-form">
+         <div class="black-header">Edit Actor</div>
+        <div class="add-movies-form-section">
+            <form action="/admin/edit-actor/{{actor._id}}" class="movies-form" enctype="multipart/form-data" method="POST">
+                <div class="input-section">
+                    <label class="fm-details">
+                        Actor Name :</label>
+                            <input type="text" name="actorname" value="{{actor.actorname}}" required>
+
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Language :</label>
+                    <select name="language" >
+                        <option value="{{actor.language}}">{{actor.language}}</option>
+                        <option value="malayalam">Malayalam</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="telugu">Telugu</option>
+                        <option value="hollywood">Hollywood</option>
+                        <option value="other">Other</option>
+                        <option value="webseries">Web series</option>
+                    </select>
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Age : </label>
+                    <input type="text" name="age" value="{{actor.age}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Year Active : </label>
+                    <input type="text" name="yearactive" value="{{actor.yearactive}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Occupation :</label>
+                    <input type="text" name="occupation" value="{{actor.occupation}}">
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Instagram Link : </label>
+                    <input type="text" name="instalink" value="{{actor.instalink}}" >
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Twitter Link : </label>
+                    <input type="text" name="twitlink" value="{{actor.twitlink}}" >
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Biography : </label>
+                    <input type="text" name="biography" value="{{actor.biography}}">
+                </div>
+                <img src="/images/actor-posters/{{actor._id}}.jpg"  style="width: 100px;" id="prodimage1">
+                <div class="input-section" >
+                     <label class="fm-details">
+                        Movie Poster : </label>
+                    <input type="file" name="image" onchange="viewImage(event,'image1')" >
+                </div>
+                <button type="submit">Edit Actor</button>
+               
+            </form>
+        </div>
+    </div>
+</div>

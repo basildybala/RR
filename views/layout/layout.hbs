@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    {{!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> --}}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    {{#if admin}}
+    {{>admin-header}}
+    {{else}}
+    {{>user-header}}
+    {{/if}}
+    {{{body}}}
+   
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/javascripts/jquery-2.1.4.min.js"></script>
+  <script src="/javascripts/custom.js"></script>
+</html>
