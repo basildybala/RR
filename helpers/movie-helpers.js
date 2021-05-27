@@ -28,7 +28,6 @@ module.exports={
           let movies = await db.get()
             .collection(collection.MOVIES_COLLECTION)
             .findOne({ _id:ObjectID(movieId)})
-            console.log(movies)
            resolve(movies)
         });
       },
@@ -49,6 +48,23 @@ module.exports={
                     ytlink1:movieDetails.ytlink1,
                     ytlink2:movieDetails.ytlink2,
                     ytlink3:movieDetails.ytlink3,
+                    actid1:movieDetails.actid1,
+                    actid2:movieDetails.actid2,
+                    actid3:movieDetails.actid3,
+                    actid4:movieDetails.actid4,
+                    actorname1:movieDetails.actorname1,
+                    actorname2:movieDetails.actorname2,
+                    actorname3:movieDetails.actorname3,
+                    actorname4:movieDetails.actorname4,
+                    actorname5:movieDetails.actorname5,
+                    actorname6:movieDetails.actorname6,
+                    mvactorname1:movieDetails.mvactorname1,
+                    mvactorname2:movieDetails.mvactorname2,
+                    mvactorname3:movieDetails.mvactorname3,
+                    mvactorname4:movieDetails.mvactorname4,
+                    mvactorname5:movieDetails.mvactorname5,
+                    mvactorname6:movieDetails.mvactorname6,
+
                    
                     
                 }
@@ -116,9 +132,5 @@ module.exports={
             })
         })
     },
-    // getActors:()=>{
-    //     return new Promise((resolve,reject)=>{
-    //         db.get().
-    //     })
-    // }
+    
 }

@@ -14,7 +14,7 @@
         <div class="video-container">
           <span class="close"> &#10006; </span>
           
-          <iframe  class="lazy-photo" data-src="{{movie.yttrailorlink}}" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+          <iframe  class="lazy-photo" dsrc="{{movie.yttrailorlink}}" frameborder="0" allow="autoplay" allowfullscreen></iframe>
       </div>
       </div>
       <h6>{{movie.name}}</h6>
@@ -37,6 +37,14 @@
      
       <!----------------Actors-->
       <div class="basic-head"><h4>Actors</h4></div>
+        <div class="swiper">
+          <div class="actorswp">
+            <a href="/actor/{{movie.actid1}}"><img src="/images/actor-posters/{{movie.actid1}}.jpg" alt="">
+            <h6>{{movie.actorname1}}</h6>
+            <p>{{movie.mvactorname1}}</p>
+            </a>
+          </div>
+        </div>
       <div class="actor-section">
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -44,21 +52,25 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="actor">
-                <a href="#" class="actor-a">
-                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
-                  <p>Tovino Thomas</p>
+                <a href="/actor/{{movie.actid1}}" class="actor-a">
+                  <img src="/images/actor-posters/{{movie.actid1}}.jpg" alt="" srcset="" />
+                  <p>{{movie.actorname1}}</p>
                 </a>
                 <a href="#" class="actor-a">
-                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
-                  <p>Tovino Thomas</p>
+                  <img src="/images/actor-posters/{{movie.actid2}}.jpg" alt="" srcset="" />
+                  <p>{{movie.actorname2}}</p>
                 </a>
                 <a href="#" class="actor-a">
-                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
-                  <p>Tovino Thomas</p>
+                  <img src="/images/actor-posters/{{movie.actid3}}.jpg" alt="" srcset="" />
+                  <p>{{movie.actorname3}}</p>
                 </a>
                 <a href="#" class="actor-a">
-                  <img src="/images/movie-posters/{{movie._id}}.jpg" alt="" srcset="" />
-                  <p>Tovino Thomas</p>
+                  <img src="/images/actor-posters/{{movie.actid4}}.jpg" alt="" srcset="" />
+                  <p>{{movie.actorname4}}</p>
+                </a>
+                <a href="#" class="actor-a">
+                  <img src="/images/actor-posters/{{movie.actid5}}.jpg" alt="" srcset="" />
+                  <p>{{movie.actorname5}}</p>
                 </a>
               </div>
                  
@@ -139,9 +151,7 @@
             </div>
           </div>
       </div>
-      
-      
-     
+    <h1> </h1>
     </div>
     
     

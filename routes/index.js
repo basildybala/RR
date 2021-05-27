@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 router.get('/malayalam-movies', function(req, res, next) {
   getHelp.getMalayalamMovies().then((malayalamMovies)=>{
     res.render('movies-category/malayalam-movies',{malayalamMovies});
-    console.log(malayalamMovies);
+    
   })
   
 
@@ -31,9 +31,14 @@ router.get('/actors', function(req, res, next) {
 });
 //ONE Movie Show
 router.get('/movie/:id',async (req,res)=>{
-  console.log(req.params.id);
+
+  
   let movie=await movieHelpers.getOneMovie(req.params.id)
-  let actors=await movieHelpers.getActors()
+  // let actor=await movieHelpers.getActors(movie)
+   
+  // .then((data)=>{
+    
+  // })
   res.render('movies-category/movie',{movie})
 });
 //ONE ACTOR
