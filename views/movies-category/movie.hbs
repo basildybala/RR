@@ -38,51 +38,58 @@
       <!----------------Actors-->
       <div class="basic-head"><h4>Actors</h4></div>
         <div class="swiper">
-          <div class="actorswp">
-            <a href="/actor/{{movie.actid1}}"><img src="/images/actor-posters/{{movie.actid1}}.jpg" alt="">
+          <div class="actor-swp">
+            <div class="actorswp">
+            <a href="/actor/{{movie.actid1}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid1}}.jpg" alt="">
             <h6>{{movie.actorname1}}</h6>
             <p>{{movie.mvactorname1}}</p>
             </a>
-          </div>
-        </div>
-      <div class="actor-section">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="actor">
-                <a href="/actor/{{movie.actid1}}" class="actor-a">
-                  <img src="/images/actor-posters/{{movie.actid1}}.jpg" alt="" srcset="" />
-                  <p>{{movie.actorname1}}</p>
-                </a>
-                <a href="#" class="actor-a">
-                  <img src="/images/actor-posters/{{movie.actid2}}.jpg" alt="" srcset="" />
-                  <p>{{movie.actorname2}}</p>
-                </a>
-                <a href="#" class="actor-a">
-                  <img src="/images/actor-posters/{{movie.actid3}}.jpg" alt="" srcset="" />
-                  <p>{{movie.actorname3}}</p>
-                </a>
-                <a href="#" class="actor-a">
-                  <img src="/images/actor-posters/{{movie.actid4}}.jpg" alt="" srcset="" />
-                  <p>{{movie.actorname4}}</p>
-                </a>
-                <a href="#" class="actor-a">
-                  <img src="/images/actor-posters/{{movie.actid5}}.jpg" alt="" srcset="" />
-                  <p>{{movie.actorname5}}</p>
-                </a>
-              </div>
-                 
             </div>
-             <div class="swiper-slide">
-              
+            {{#if movie.actid2}}
+            <div class="actorswp">
+            <a href="/actor/{{movie.actid2}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid2}}.jpg" alt="">
+            <h6>{{movie.actorname2}}</h6>
+            <p>{{movie.mvactorname2}}</p>
+            </a>
             </div>
-            
+            {{/if}}
+            {{#if movie.actid3}}
+             <div class="actorswp">
+            <a href="/actor/{{movie.actid3}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid3}}.jpg" alt="">
+            <h6>{{movie.actorname3}}</h6>
+            <p>{{movie.mvactorname3}}</p>
+            </a>
+            </div>
+            {{/if}}
+            {{#if movie.actid4}}
+             <div class="actorswp">
+            <a href="/actor/{{movie.actid4}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid4}}.jpg" alt="">
+            <h6>{{movie.actorname4}}</h6>
+            <p>{{movie.mvactorname4}}</p>
+            </a>
+            </div>
+            {{/if}}
+            {{#if movie.actid5}}
+             <div class="actorswp">
+            <a href="/actor/{{movie.actid5}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid5}}.jpg" alt="">
+            <h6>{{movie.actorname5}}</h6>
+            <p>{{movie.mvactorname5}}</p>
+            </a>
+            </div>
+            {{/if}}
+            {{#if movie.actid6}}
+             <div class="actorswp">
+            <a href="/actor/{{movie.actid6}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid6}}.jpg" alt="">
+            <h6>{{movie.actorname6}}</h6>
+            <p>{{movie.mvactorname6}}</p>
+            </a>
+            </div>
+            {{/if}}
             
           </div>
+          
         </div>
-      </div>
+     
       <div class="mv-details-section">
         
           <div class="head11">
@@ -107,20 +114,7 @@
               good Film Contrary to popular belief, Lorem Ipsum is not simply <br>
               random text. It has roots in a piece of classical Latin literature <br>
               from 45 BC, making it over 2000 years old. Richard McClintock, a <br>
-              {{!-- Latin professor at Hampden-Sydney College in Virginia, looked up
-              one of the more obscure Latin words, consectetur, from a Lorem
-              Ipsum passage, and going through the cites of the word in
-              classical literature, discovered the undoubtable source. Lorem
-              Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-              Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-              written in 45 BC. This book is a treatise on the theory of ethics,
-              very popular during the Renaissance. The first line of Lorem
-              Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-              section 1.10.32. The standard chunk of Lorem Ipsum used since the
-              1500s is reproduced below for those interested. Sections 1.10.32
-              and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-              also reproduced in their exact original form, accompanied by
-              English versions from the 1914 translation by H. Rackham. --}}
+              
             </p>
             <a href="javascript:void();" class="readmore-btn">Read more</a>
           </span>
@@ -151,7 +145,7 @@
             </div>
           </div>
       </div>
-    <h1> </h1>
+  
     </div>
     
     
