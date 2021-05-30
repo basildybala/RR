@@ -23,6 +23,7 @@
                         <option value="webseries">Web series</option>
                     </select>
                 </div>
+               
                 <div class="input-section">
                     <label class="fm-details">
                         Release Date : </label>
@@ -52,6 +53,11 @@
                     <label class="fm-details">
                         Story : </label>
                     <input type="text" name="story" value="{{movie.story}}" >
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Read More Story : </label>
+                    <input type="text" name="readmorestory" value="{{movie.readmorestory}}" >
                 </div>
                 <div class="input-section">
                     <label class="fm-details">
@@ -115,6 +121,13 @@
                         Movie Poster : </label>
                     <input type="file" name="image" onchange="posterView(event)" >
                 </div>
+                 <img src="/images/movie-posters/{{movie._id}}a.jpg" style="width: 100px;" id="viewposter">
+                <div class="input-section">
+                     <label class="fm-details">
+                        Movie Poster : </label>
+                    <input type="file" name="image1" onchange="posterView(event)" >
+                </div>
+
                 <button type="submit">Edit Movie</button>
                 
             </form>

@@ -1,10 +1,10 @@
 <div class="actor-section">
-        <div class="black-headerr">{{actor.actorname}}</div>
-        <div class="actor-two">
+        <div class="actor-header">{{actor.actorname}}</div>
+        <div class="actor-two" style="position: relative;">
             <div class="actor-image">
                 <img src="/images/actor-posters/{{actor._id}}.jpg" alt="">
             </div>
-            <div class="actor-details">
+            <div class="actor-details"  >
                 <div class="mv-details">
                     <h4>Name :</h4>  <h5>{{actor.actorname}}</h5>
                 </div>
@@ -28,21 +28,132 @@
                     <h4>Connect with :</h4> <a href="{{actor.instalink}}"> <img src="/images/other/instagram-png.png" alt=""> </a>
                     <a href="{{actor.twitlink}}"> <img src="/images/other/twitter (1).png" alt=""> </a>
                 </div>
-                <div class="mv-details">
-                    <h4>Biography :</h4>  <h5>{{actor.biography}}</h5>
+                <div class="mv-details" ">
+                   
+                  <span class="readmore-btn">Biograpghy</span>
+                      <div class="story-readmore">
+
+                        <span class="closee"> &#10006; </span>
+                        
+                        <p>{{actor.biography}}</p>
+                    </div>
                 </div>
+                                    
             </div>
             
         </div>
+        <div class="basic-head">
+          <h4>{{actor.actorname}} FILMOGRAPHY</h4>
+        </div>
         
-      <div class="video-section">
-        <div class="video-yt">
-          <h4 class="movies-header-h4"><i class="material-icons"> movie</i>Filmography</h4>
-        </div>
+      
+         {{#if actor.filmid15}}
+         <div class="movies-section">
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid15}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid15}}.jpg" alt="">
+            <h6>{{actor.filmname15}}</h6>
+            </a>
+          </div>
+          {{/if}}
+          {{#if actor.filmid14}}
+           <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid14}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid14}}.jpg" alt="">
+            <h6>{{actor.filmname14}}</h6>
+            </a>
+           </div>
+          {{/if}}
+          {{#if actor.filmid13}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid13}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid13}}.jpg" alt="">
+            <h6>{{actor.filmname13}}</h6>
+            </a>
+            </div>
+          {{/if}}
+          {{#if actor.filmid12}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid12}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid12}}.jpg" alt="">
+            <h6>{{actor.filmname12}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid11}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid11}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid11}}.jpg" alt="">
+            <h6>{{actor.filmname11}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid10}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid10}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid10}}.jpg" alt="">
+            <h6>{{actor.filmname10}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid9}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid9}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid9}}.jpg" alt="">
+            <h6>{{actor.filmname9}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid8}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid8}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid8}}.jpg" alt="">
+            <h6>{{actor.filmname8}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid7}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid7}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid7}}.jpg" alt="">
+            <h6>{{actor.filmname7}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid6}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid6}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid6}}.jpg" alt="">
+            <h6>{{actor.filmname6}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid5}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid5}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid5}}.jpg" alt="">
+            <h6>{{actor.filmname5}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid4}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid4}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid4}}.jpg" alt="">
+            <h6>{{actor.filmname4}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid3}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid3}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid3}}.jpg" alt="">
+            <h6>{{actor.filmname3}}</h6>
+            </a>
+           </div>
+          {{/if}}
+           {{#if actor.filmid2}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid2}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid2}}.jpg" alt="">
+            <h6>{{actor.filmname2}}</h6>
+            </a>
+           </div>
+          {{/if}}
+          {{#if actor.filmid1}}
+            <div class="actor-film-card">
+            <a href="/movie/{{actor.filmid1}}"><img class="lazy-photo" data-src="/images/movie-posters/{{actor.filmid1}}.jpg" alt="">
+            <h6>{{actor.filmname1}}</h6>
+            </a>
+           </div>
+          {{/if}}
+
       </div>
-      <div class="video-section">
-        <div class="video-yt">
-          <h4 class="movies-header-h4"><i class="material-icons"> image</i>Images</h4>
-        </div>
-      </div>
-    </div>
+         </div>
+  

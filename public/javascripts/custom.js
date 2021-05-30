@@ -1,23 +1,23 @@
-
+//LAZY LOAD
        const myLazyLoad= new LazyLoad ({
            elements_selector:".lazy-photo"
        });
    
 
 
-//Trailor Popup
-   const btn =document.querySelector('.trailor-btn');
-   const videoContainer=document.querySelector('.video-container');
-   const close =document.querySelector('.close');
-   
-   
-   btn.addEventListener('click',()=>{
-       videoContainer.classList.add('show')
-   })
-   close.addEventListener('click',()=>{
-       videoContainer.classList.remove('show')
-   })
 
+//Read More popup
+  const btnn =document.querySelector('.readmore-btn');
+   const storyContainer=document.querySelector('.story-readmore');
+   const closee =document.querySelector('.closee');
+   
+   
+   btnn.addEventListener('click',()=>{
+    storyContainer.classList.add('show')
+   })
+   closee.addEventListener('click',()=>{
+    storyContainer.classList.remove('show')
+   })
 
 //Swiper 4 Show
 

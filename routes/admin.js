@@ -25,19 +25,37 @@ router.get('/show-actor', function(req, res, next) {
   
 });
 //ACTOR ADD
-router.get('/add-actor',verifyAdmin, function(req, res, next) {
+// router.get('/add-actor',verifyAdmin, function(req, res, next) {
+router.get('/add-actor', function(req, res, next) {
   res.render('admin/add-actor');
 });
+// router.post('/add-actor',(req,res)=>{
+//   movieHelpers.addActor(req.body,(id)=>{
+//     let actorposter=req.files.image
+   
+//     actorposter.mv("./public/images/actor-posters/" + id + ".jpg",(err,done)=>{
+//       if(!err){
+//         res.render("admin/add-actor")
+//       }else{
+//         console.log(err);
+//       }
+//     })
+  
+//   })
+// })
 router.post('/add-actor',(req,res)=>{
   movieHelpers.addActor(req.body,(id)=>{
     let actorposter=req.files.image
-   
+    let actorposter1=req.files.image1
     actorposter.mv("./public/images/actor-posters/" + id + ".jpg",(err,done)=>{
-      if(!err){
-        res.render("admin/add-actor")
-      }else{
-        console.log(err);
-      }
+      actorposter1.mv("./public/images/actor-posters/" + id + "a"+".jpg",(err,done)=>{
+        if(!err){
+          res.render("admin/add-actor")
+        }else{
+          console.log(err);
+        }
+      })
+      
     })
   
   })
@@ -88,12 +106,16 @@ router.get('/add-movies', function(req, res, next) {
 router.post('/add-movies',(req,res)=>{
   movieHelpers.addMovies(req.body,(id)=>{
     let movieposter=req.files.image
+    let moviecoverposter=req.files.image1
     movieposter.mv("./public/images/movie-posters/" + id + ".jpg",(err,done)=>{
-      if(!err){
-        res.render("admin/add-movies")
-      }else{
-        console.log(err);
-      }
+      moviecoverposter.mv("./public/images/movie-posters/" + id +"a"+".jpg",(err,done)=>{
+        if(!err){
+          res.render("admin/add-movies")
+        }else{
+          console.log(err);
+        }
+      })
+      
     })
     
   })
