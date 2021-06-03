@@ -84,7 +84,7 @@ body{
 
 /*upcoming section*/
 .black-header{
-    background-color: rgb(24, 20, 20);
+    background-color: rgb(54 46 46);
     width: 100%;
     height: 30px;
     display: flex;
@@ -100,7 +100,7 @@ body{
 }
 
 
-.up-list{
+/* .up-list{
     padding: 10px 5px;
     background-color: #ffffff;
     stroke-width: 5px;
@@ -175,7 +175,7 @@ body{
     margin: 2px;
     font-family: 'Varela Round', sans-serif;
 
-}
+} */
 .white-link{
     height: 30px;
     width: 100%;
@@ -223,7 +223,7 @@ body{
 }
 .movie-cover{
     position: absolute;
-    height: 138px;
+    height: 150px;
     max-width: 135px;
     bottom: -58px;
     left: 26px;
@@ -396,7 +396,7 @@ body{
     margin-top: 10px;
 }
 .basic-head h4{
-    margin: 4px 3px;
+    margin: 4px 8px;
     color: rgb(252, 54, 19);
     font-family: 'Varela Round', sans-serif;
 }
@@ -695,6 +695,9 @@ margin: 2px;
     align-items: center;
     justify-content: center;
 }
+.movies-section a{
+    text-decoration: none;
+}
 .movies-list{
     display: flex;
     flex-direction: column;
@@ -826,6 +829,7 @@ margin: 2px;
     overflow: hidden;
       font-family: 'Varela Round', sans-serif;
       font-size: 11px;
+      margin-left: 8px;
   }
   /*ACTOR FILM*/
   .actor-header{

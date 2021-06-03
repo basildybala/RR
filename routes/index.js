@@ -11,36 +11,51 @@ router.get('/', function(req, res, next) {
 //Movie Language LIst
 //MALAYALAM
 router.get('/malayalam-movies', function(req, res, next) {
-  getHelp.getMalayalamMovies().then((malayalamMovies)=>{
+  getHelp.getMalayalamMovies(req,res).then((malayalamMovies)=>{
+    
     res.render('movies-category/malayalam-movies',{malayalamMovies});
 
   }) 
 });
 //TAMIL
 router.get('/tamil-movies', function(req, res, next) {
-  getHelp.getTamilMovies().then((tamilMovies)=>{
+  getHelp.getTamilMovies(req,res).then((tamilMovies)=>{
     res.render('movies-category/tamil-movies',{tamilMovies});
 
   }) 
 });
 //TELUGU
 router.get('/telugu-movies', function(req, res, next) {
-  getHelp.getTeluguMovies().then((teluguMovies)=>{
+  getHelp.getTeluguMovies(req,res).then((teluguMovies)=>{
     res.render('movies-category/telugu-movies',{teluguMovies});
 
   }) 
 });
 //HINDI
 router.get('/hindi-movies', function(req, res, next) {
-  getHelp.getHindiMovies().then((hindiMovies)=>{
+  getHelp.getHindiMovies(req,res).then((hindiMovies)=>{
     res.render('movies-category/hindi-movies',{hindiMovies});
+
+  }) 
+});
+//HOLLYWOOD
+router.get('/hollywood-movies', function(req, res, next) {
+  getHelp.getHollywoodMovies(req,res).then((hollywoodMovies)=>{
+    res.render('movies-category/hollywood-movies',{hollywoodMovies});
+
+  }) 
+});
+//OTHER
+router.get('/other-movies', function(req, res, next) {
+  getHelp.getOtherMovies(req,res).then((otherMovies)=>{
+    res.render('movies-category/other-movies',{otherMovies});
 
   }) 
 });
 
 
 router.get('/actors', function(req, res, next) {
-  movieHelpers.getAllActor().then((actor)=>{
+  movieHelpers.getAllActor(req,res).then((actor)=>{
     res.render('actor/actors-show',{actor});
   })
 });
@@ -56,7 +71,40 @@ router.get('/actor/:id',async (req,res)=>{
 });
 
 
-router.get('/movies-add-actor/:id',)
+
+//pagination
+function paginatedResults(model){
+  return async (req,res,next)=>{
+      const page=parseInt(req.query.page)
+  const limit=parseInt(req.query.limit)
+
+  
+  const startIndex=(page - 1)* limit
+  const endIndex=page*limit
+  const results={}
+  if(endIndex< await model.countDocument().exec()){
+      results.next={
+          page:page+1,
+          limit:limit
+      }
+  }
+
+  if(startIndex>0){
+  results.previous={
+      page:page-1,
+      limit:limit
+  }
+}
+try{
+  results.results= await model.find().limit(limit).skip(startIndex).exec()
+  res.paginatedResults =results
+  next()
+} catch(e) {
+  res.status(500).json({message:e.message})
+}
+  }
+}
+
 
 
 module.exports = router;

@@ -36,6 +36,7 @@ module.exports={
             db.get().collection(collection.MOVIES_COLLECTION).updateOne({_id:ObjectID(movieId)},{
                 $set:{
                     name:movieDetails.name,
+                    engname:movieDetails.engname,
                     category:movieDetails.category,
                     releasedate:movieDetails.releasedate,
                     readmorestory:movieDetails.readmorestory,
