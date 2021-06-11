@@ -38,6 +38,7 @@ module.exports={
                     name:movieDetails.name,
                     engname:movieDetails.engname,
                     category:movieDetails.category,
+                    trending:movieDetails.trending,
                     releasedate:movieDetails.releasedate,
                     readmorestory:movieDetails.readmorestory,
                     director:movieDetails.director,
@@ -166,6 +167,52 @@ module.exports={
     deleteActor:(actorId)=>{
         return new Promise((resolve,reject)=>{
             db.get().collection(collection.ACTOR_COLLECTION).removeOne({_id:ObjectID(actorId)}).then((response)=>{
+                resolve(response)
+            })
+        })
+    },
+    addNextweek:(nextweek,callback)=>{
+        
+        db.get().collection('nextweek').insertOne(nextweek).then((data)=>{
+            callback(true)
+        })
+    
+    },
+    getAllNextweek:()=>{
+        return new Promise(async(resolve,reject)=>{
+            let nextweek=await db.get().collection(collection.NEXT_WEEK_COLLECTION).find().sort({_id:-1}).toArray()
+            resolve(nextweek)
+        })
+    },
+    getOneNextweek:(nextweekId) => {
+       
+        return new Promise((resolve,reject) => {
+
+          db.get()
+            .collection(collection.NEXT_WEEK_COLLECTION)
+            .findOne({ _id:ObjectID(nextweekId)})
+            .then((nextweek) => {
+              resolve(nextweek);
+            });
+        });
+      },
+      updateNextweek:(nextweekId,nextweekDetails)=>{
+        return new Promise((resolve,reject)=>{
+            db.get().collection(collection.NEXT_WEEK_COLLECTION).updateOne({_id:ObjectID(nextweekId)},{
+                $set:{
+                    moviename:nextweekDetails.moviename,
+                    moviereleasedate:nextweekDetails.moviereleasedate,
+                    movieid:nextweekDetails.movieid,
+
+                }
+            }).then((response)=>{
+                resolve()
+            })
+        })
+    },
+    deleteNextweek:(nextweekId)=>{
+        return new Promise((resolve,reject)=>{
+            db.get().collection(collection.NEXT_WEEK_COLLECTION).removeOne({_id:ObjectID(nextweekId)}).then((response)=>{
                 resolve(response)
             })
         })

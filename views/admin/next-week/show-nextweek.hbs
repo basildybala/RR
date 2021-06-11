@@ -1,0 +1,38 @@
+<table id="sample-table" style="width:100%;text-align:left">
+  <thead>
+  <tr >
+    <th class="admin-header">Movies Name</th>
+    <th class="admin-header"> Release Date</th>
+    <th class="admin-header"> ID</th>
+    <th class="admin-header"> Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each nextweek}}
+  <tr>
+    <td class="td-class">{{this.moviename}}</td>
+    <td class="td-class">{{this.moviereleasedate}}</td>
+     <td class="td-class"><input style="width: 90%;" type="text" value="{{this.movieid}}"> </td>
+    <td class="td-class">
+      
+        <a style="color: green;" href="/admin/edit-nextweek/{{this._id}}"> <i class="material-icons">
+edit
+</i>Edit</a>
+        <a href="/admin/delete-nextweek/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.moviename}}')"><i class="material-icons">
+delete
+</i>Delete</a>
+        
+        </td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+
+
+<script>
+
+  $(function(){
+    $('#sample-table').DataTable();
+  });
+</script>

@@ -1,0 +1,26 @@
+<div class="black-header">Edit Next weekMovies</div> 
+ <form action="/admin/edit-nextweek/{{nextweek._id}}" class="movies-form" enctype="multipart/form-data" method="POST">
+                <div class="input-section">
+                    <label class="fm-details">
+                        Movie Name :</label>
+                            <input type="text" name="moviename" value="{{nextweek.moviename}}" >
+                           
+
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Movie Release Date :</label>
+                            <input type="text" name="moviereleasedate" value="{{nextweek.moviereleasedate}}">
+                           
+
+                </div>
+                <div class="input-section">
+                    <label class="fm-details">
+                        Movie ID :</label>
+                            <input type="text" name="movieid" value="{{nextweek.movieid}}" >
+                           
+
+                </div>
+                <button type="submit">Add Nextweek</button>
+
+ </form>

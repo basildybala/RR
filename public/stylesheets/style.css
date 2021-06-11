@@ -711,21 +711,44 @@ margin: 2px;
 .movies-img img{
     width: 100%;
     height:135px ;
+    object-fit: cover;
 }
 .movies-body{
-    white-space: nowrap;
-    width: 100px;
-    overflow: hidden;
     text-align: center;
 }
 .movies-body p{
     margin: 3px 0px;
     color: white;
     font-family: 'Varela Round';
-    font-weight: 500;
-    font-size: 13px;
-    overflow: hidden;
+    font-weight: 600;
+    font-size: 10px;
     
+}
+/*Latest Update Movies*/
+.movies-list-latestupdate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 87px;
+    margin: 2px 2px;
+    height: 130px;
+    background-color: #1c1c1cdb;
+}
+.movies-img-latestupdate img{
+    width: 100%;
+    height:105px ;
+    object-fit: cover;
+}
+
+.movies-body-latestupdate{
+    text-align: center;
+}
+.movies-body-latestupdate p{
+    margin: 0px;
+    color: white;
+    font-family: 'Varela Round';
+    font-weight: 500;
+    font-size: 8px;   
 }
 
 /*ACTOR SWAP*/
@@ -739,7 +762,7 @@ margin: 2px;
     display: none;
 }
 .actorswp{
-    width: 110px;
+    width: 95px;
     height: 150px;
     overflow: hidden;
     margin-right: 5px;
@@ -747,7 +770,7 @@ margin: 2px;
 }
 .actorswp img{
     width: 100%;
-    height: 117px;
+    height: 100px;
     object-fit: cover;
 }
 .actorswp a{
@@ -871,6 +894,46 @@ margin: 2px;
   }
   .actor-film-card a{
       text-decoration: none;
+  }
+  /*Next Week MOVIES SECTION*/
+  .latest-movies-section{
+    display: flex;
+    
+  }
+  .latest-movies-section a{
+    text-decoration: none;
+  }
+  .latest-update-movies{
+    width: 110px;
+    height: 140px;
+    background-color: rgb(252, 54, 19);
+    overflow: hidden;
+    margin: 6px;
+    border: 1px solid black;
+
+  }
+  .latest-update-movies img{
+    width: 100%;
+    height: 109px;
+    object-fit: cover;
+  }
+  .latest-update-movies h4{
+    margin: 1px 0px;
+    padding: 0;
+    font-size: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
+
+
+  }
+  .latest-update-movies p{
+    margin: 0;
+    font-size: 8px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
   }
  
 @media(min-width: 767px){

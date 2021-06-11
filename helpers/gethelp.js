@@ -50,6 +50,25 @@ module.exports={
             resolve(otherMovies)
         })
     },
+    getLatestUpdate:()=>{
+        return new Promise(async(resolve,reject)=>{
+            let latestupdatemovies=await db.get().collection(collection.MOVIES_COLLECTION).find().sort({_id:-1}).limit(8).toArray()
+            resolve(latestupdatemovies)
+        })
+    },
+    getTrendingMovies:(req,res)=>{
+        return new Promise(async(resolve,reject)=>{
+            
+            let trendingMovies=await db.get().collection(collection.MOVIES_COLLECTION).find({trending:'yes'}).sort({_id:-1}).limit(8).toArray()
+            resolve(trendingMovies)
+        })
+    },
+    getLatestNextweek:()=>{
+        return new Promise(async(resolve,reject)=>{
+            let nextweekmovies=await db.get().collection(collection.NEXT_WEEK_COLLECTION).find().sort({_id:-1}).limit(8).toArray()
+            resolve(nextweekmovies)
+        })
+    },
     
     
     

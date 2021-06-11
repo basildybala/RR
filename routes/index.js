@@ -2,12 +2,28 @@ var express = require('express');
 var router = express.Router();
 var movieHelpers = require('../helpers/movie-helpers');
 var getHelp =require('../helpers/gethelp');
+const gethelp = require('../helpers/gethelp');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
-});
+  getHelp.getLatestUpdate(req,res).then((latestupdatemovies)=>{
+    getHelp.getLatestNextweek(req,res).then((nextweekmovies)=>{
+     
+      res.render('index',{latestupdatemovies,nextweekmovies});
+    })
+    
 
+  }) 
+  
+});
+router.get('/movie/:id', (req,res)=>{
+  getHelp.getLatestUpdate(req,res).then((latestupdatemovies)=>{
+    getHelp.getLatestNextweek(req,res).then(async(nextweekmovies)=>{
+       let movie=await movieHelpers.getOneMovie(req.params.id)
+       res.render('movies-category/movie',{movie,latestupdatemovies,nextweekmovies})
+    })
+  })
+});
 //Movie Language LIst
 //MALAYALAM
 router.get('/malayalam-movies', function(req, res, next) {
@@ -60,10 +76,10 @@ router.get('/actors', function(req, res, next) {
   })
 });
 //ONE Movie Show
-router.get('/movie/:id',async (req,res)=>{
-  let movie=await movieHelpers.getOneMovie(req.params.id)
-  res.render('movies-category/movie',{movie})
-});
+// router.get('/movie/:id',async (req,res)=>{
+//   let movie=await movieHelpers.getOneMovie(req.params.id)
+//   res.render('movies-category/movie',{movie})
+// });
 //ONE ACTOR
 router.get('/actor/:id',async (req,res)=>{
   let actor=await movieHelpers.getOneActor(req.params.id)

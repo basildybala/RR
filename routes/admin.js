@@ -88,7 +88,7 @@ router.get('/delete-actor/:id',(req,res)=>{
 });
 
 
-//MOVIES SECTION
+//MOVIES SECTION--------------------------------------------------------
 
 router.get('/show-admin-movies', function(req, res, next) {
   console.log(req.params.id);
@@ -168,8 +168,47 @@ router.post('/add-images',(req,res)=>{
     
   })
 });
+//NEXT WEEK MOVIES------------------------------------------
+//SHOW
+router.get('/show-nextweek-movies', function(req, res, next) {
+  movieHelpers.getAllNextweek().then((nextweek)=>{
+    res.render('admin/next-week/show-nextweek',{nextweek});
+  })
+  
 
-//LOGIN
+});
+//ADD
+router.get('/add-nextweek-movies', function(req, res, next) {
+  
+  res.render('admin/next-week/add-nextweek');
+});
+router.post('/add-nextweek-movies',(req,res)=>{
+  movieHelpers.addNextweek(req.body,(result)=>{
+    res.render("admin/next-week/add-nextweek")   
+    
+  })
+});
+//EDIT
+router.get('/edit-nextweek/:id',async (req,res)=>{
+  let nextweek=await movieHelpers.getOneNextweek(req.params.id)
+  res.render('admin/next-week/edit-nextweek',{nextweek})
+});
+
+router.post('/edit-nextweek/:id',(req,res)=>{
+  movieHelpers.updateNextweek(req.params.id,req.body).then(()=>{
+    res.redirect('/admin/show-nextweek-movies')
+  })
+})
+//DELETE
+router.get('/delete-nextweek/:id',(req,res)=>{
+  let nextweekId=req.params.id
+  movieHelpers.deleteNextweek(nextweekId).then((response)=>{
+    res.redirect('/admin/show-nextweek-movies')
+  })
+});
+
+
+//LOGIN-------------------------------------------------------
 router.get('/97login', function(req, res, next) {
   if(req.session.loggedIn){
     res.redirect('basic')
