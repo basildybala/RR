@@ -46,6 +46,7 @@ module.exports={
                     genre:movieDetails.genre,
                     duration:movieDetails.duration,
                     story:movieDetails.story,
+                    storyenglish:movieDetails.storyenglish,
                     yttrailorlink:movieDetails.yttrailorlink,
                     ytlink:movieDetails.ytlink,
                     ytlink1:movieDetails.ytlink1,

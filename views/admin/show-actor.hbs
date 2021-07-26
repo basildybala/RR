@@ -1,28 +1,38 @@
-
-
-<table style="width:100%;text-align:left">
+<table id="sample-table" style="width:100%;text-align:left">
+  <thead>
   <tr >
     <th class="admin-header">Actor Name</th>
     <th class="admin-header"> Language</th>
-     <th  class="admin-header"> ID</th>
+    <th class="admin-header"> ID</th>
     <th class="admin-header"> Options</th>
-   
   </tr>
+  </thead>
+  <tbody>
   {{#each actor}}
   <tr>
     <td class="td-class">{{this.actorname}}</td>
     <td class="td-class">{{this.language}}</td>
-    <td class="td-class"><input style="width: 90%;" type="text" value="{{this._id}}"> </td>
+     <td class="td-class"><input style="width: 90%;" type="text" value="{{this._id}}"> </td>
     <td class="td-class">
       
         <a style="color: green;" href="/admin/edit-actor/{{this._id}}"> <i class="material-icons">
 edit
 </i>Edit</a>
-        <a href="/admin/delete-actor/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.actorname}}')"><i class="material-icons">
+        <a href="/admin/delete-actor/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.name}}')"><i class="material-icons">
 delete
-</i></a>
+</i>Delete</a>
         
         </td>
   </tr>
   {{/each}}
+  </tbody>
 </table>
+
+
+
+<script>
+
+  $(function(){
+    $('#sample-table').DataTable();
+  });
+</script>

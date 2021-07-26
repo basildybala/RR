@@ -137,6 +137,11 @@ router.post('/edit-movies/:id',(req,res)=>{
       let movieposter=req.files.image
       movieposter.mv("./public/images/movie-posters/" + id + ".jpg",)
     }
+    else if
+    (req.files.image1){
+      let movieposter=req.files.image1
+      movieposter.mv("./public/images/movie-posters/" + id +"a"+".jpg",)
+    }
   })
 })
 

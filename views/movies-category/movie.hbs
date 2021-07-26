@@ -1,7 +1,23 @@
-
+<!--------------------------------Movies Categories Swipe---------------------->
+      <div class="nav-bar-sticky ">
+        
+        <ul>
+          <span>Movies</span>
+          <div class="nav-swiper">
+          <li><a href="/">Home</a></li>
+          <li><a href="/malayalam-movies">Malayalam</a></li>
+          <li><a href="/tamil-movies">Tamil</a></li>
+          <li><a href="/hindi-movies">Hindi</a></li>
+          <li><a href="/telugu-movies">Telugu</a></li>
+          <li><a href="/hollywood-movies">Hollywood</a></li>
+          <li><a href="/other-movies">Other</a></li>
+          <li><a href="/actors">Actors</a></li>
+        </div>
+        </ul>
+      </div>
      <!-----------------------------------Latest Update------------------------------------------>
     <div class="black-header">
-      <i class="material-icons"></i>
+      <i class="material-icons">local_movies</i>
       Latest Update
     </div>
 <div class="swiper">
@@ -13,29 +29,14 @@
       </div>
     <div class="movies-body">
       <p>{{this.name}}</p>
+      <h6>{{this.engname}}</h6>
     </div>  
     
     </a>
     {{/each}}
   </div>
 </div>
-  <!--------------------------------------Next Week Reales--------------------------------->
-     
-    <div class="black-header">
-          <i class="material-icons"></i>
-          Next Week Release
-        </div>
-    <div class="swiper">
-      <div class="latest-movies-section">
-        {{#each nextweekmovies}}
-      <a href="/movie/{{this.movieid}}" class="latest-update-movies">
-        <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="">
-        <H4>{{this.moviename}}</H4>
-        <p>{{this.moviereleasedate}}</p>
-      </a>
-      {{/each}}
-    </div>
-    </div>
+ 
 
 
     <!-----------------------------------MOVIES SECTION----------------------->
@@ -43,7 +44,8 @@
       <div class="actor-header">{{movie.engname}}</div>
       <div class="movie-img">
         <img data-src="/images/movie-posters/{{movie._id}}a.jpg" class="backimg lazy-photo" alt="" />
-        <img data-src="/images/movie-posters/{{movie._id}}.jpg" class="movie-cover lazy-photo" alt="" />
+        <a href="/images/movie-posters/{{movie._id}}.jpg">
+        <img data-src="/images/movie-posters/{{movie._id}}.jpg" class="movie-cover lazy-photo" alt="" /></a>
         <div class="trailor-btn">
         <div class="fa-trailor">    {{#if movie.yttrailorlink}}
         <p> Watch Trailor</p>
@@ -51,7 +53,7 @@
         {{else}}
         <p> Trailor Notyet</p>
         {{/if}}</div>
-        <i class="fa fa-play "> <i class="material-icons">play_circle_filled</i> </i></div>
+        <div class="fa fa-playy  "> <i class="fa fa-play"></i>  </div></div>
         <div class="video-container">
           <span class="close"> &#10006; </span>
           
@@ -151,11 +153,19 @@
       
       
         <div class="story">
-          <div class="story-h"><p>Story:</p></div>
+          <div class="story-h"><p>Story: {{#if movie.storyenglish}}<span class="readmore-btn-english">English</span>{{/if}}</p></div>
           <div class="story-p">
             <p>
                 {{movie.story}}
             </p>
+            <div class="story-readmore-english">
+            
+                <span class="closee-english"> &#10006; </span>
+                
+                <p>
+                  {{movie.storyenglish}}
+                </p>
+            </div>
             {{#if movie.readmorestory}}
             <span class="readmore-btn">Read More</span>{{/if}}
   <div class="story-readmore">
@@ -166,6 +176,11 @@
 </div>
           </div>
         </div>
+      </div>
+        <div class="share-link">
+        <h4>Share With:</h4> 
+        <a href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   " data-action="share/tg/share" class="share-tele" ><i class="fa fa-telegram" aria-hidden="true"></i></a>
+        <a href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite" data-action="share/whatsapp/share" class="share-whats" ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
       </div>
        <div class="basic-head"><h4>Video</h4> </div>
       <div class="swiper">
@@ -194,6 +209,43 @@
       </div>
       
     </div>
+     <!--------------------------------------Next Week Reales--------------------------------->
+     
+    <div class="black-header">
+          <i class="material-icons">next_week</i>
+          Next Week Release
+        </div>
+    <div class="swiper">
+      <div class="latest-movies-section">
+        {{#each nextweekmovies}}
+      <a href="/movie/{{this.movieid}}" class="latest-update-movies">
+        <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="">
+        <H4>{{this.moviename}}</H4>
+        <p>{{this.moviereleasedate}}</p>
+      </a>
+      {{/each}}
+    </div>
+    </div>
+     <!-----------------------------------Trnding Movies------------------------------------------>
+    <div class="black-header">
+      <i class="material-icons">trending_up</i>
+      Trending Movies
+    </div>
+<div class="swiper">
+  <div class="latest-movies-section">
+    {{#each trendingmovies}}
+    <a href="/movie/{{this._id}}" class="movies-list">
+      <div class="movies-img">
+        <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+      </div>
+    <div class="movies-body">
+      <p>{{this.name}}</p>
+    </div>  
+    
+    </a>
+    {{/each}}
+  </div>
+</div>
 
     <script>
       //Trailor Popup
@@ -207,6 +259,19 @@
    })
    close.addEventListener('click',()=>{
        videoContainer.classList.remove('show')
+   })
+
+
+   const btnenglish =document.querySelector('.readmore-btn-english');
+   const storyContainerenglish=document.querySelector('.story-readmore-english');
+   const closenglish =document.querySelector('.closee-english');
+   
+   
+   btnenglish.addEventListener('click',()=>{
+    storyContainerenglish.classList.add('show')
+   })
+   closenglish.addEventListener('click',()=>{
+    storyContainerenglish.classList.remove('show')
    })
     </script>
     

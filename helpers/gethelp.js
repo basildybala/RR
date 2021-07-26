@@ -11,7 +11,7 @@ module.exports={
         
         return new Promise(async(resolve,reject)=>{
             const {page=1,limit=10}=req.query;
-            let malayalamMovies=await db.get().collection(collection.MOVIES_COLLECTION).find({category:'malayalam'}).sort({_id:-1}).limit(limit*1).skip((page-1)*limit).toArray()
+            let malayalamMovies=await db.get().collection(collection.MOVIES_COLLECTION).find({category:'Malayalam'}).sort({_id:-1}).limit(limit*1).skip((page-1)*limit).toArray()
             resolve(malayalamMovies)
         })
     },
