@@ -29,7 +29,7 @@
       </div>
     <div class="movies-body">
       <p>{{this.name}}</p>
-      <h6>{{this.engname}}</h6>
+      <h6>( {{this.engname}} )</h6>
     </div>  
     
     </a>
@@ -40,248 +40,248 @@
 
 
     <!-----------------------------------MOVIES SECTION----------------------->
-    <div class="main">
-      <div class="actor-header">{{movie.engname}}</div>
-      <div class="movie-img">
-        <img data-src="/images/movie-posters/{{movie._id}}a.jpg" class="backimg lazy-photo" alt="" />
-        <a href="/images/movie-posters/{{movie._id}}.jpg">
-        <img data-src="/images/movie-posters/{{movie._id}}.jpg" class="movie-cover lazy-photo" alt="" /></a>
-        <div class="trailor-btn">
-        <div class="fa-trailor">    {{#if movie.yttrailorlink}}
-        <p> Watch Trailor</p>
-         
+<div class="main">
+  <div class="actor-header">{{movie.engname}}</div>
+  <div class="movie-img">
+    <img
+      data-src="/images/movie-posters/{{movie._id}}a.jpg"
+      class="backimg lazy-photo"
+      alt=""
+    />
+    <a href="/images/movie-posters/{{movie._id}}.jpg">
+      <img
+        data-src="/images/movie-posters/{{movie._id}}.jpg"
+        class="movie-cover lazy-photo"
+        alt=""
+      /></a>
+    <div class="trailor-btn">
+      <div class="fa-trailor">
+        {{#if movie.yttrailorlink}}
+          <p> Watch Trailor</p>
+
         {{else}}
-        <p> Trailor Notyet</p>
+
+          <p> Trailor Notyet</p>
         {{/if}}</div>
-        <div class="fa fa-playy  "> <i class="fa fa-play"></i>  </div></div>
-        <div class="video-container">
-          <span class="close"> &#10006; </span>
-          
-          <iframe  class="lazy-photo" data-src="{{movie.yttrailorlink}}" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+      <div class="fa fa-playy"> <i class="fa fa-play"></i> </div></div>
+    <div class="video-container">
+      <span class="close"> &#10006; </span>
+
+      <iframe
+        class="lazy-photo"
+        data-src="{{movie.yttrailorlink}}"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+  </div>
+
+  <div class="mv-head"><i class="fas fa-star"></i><h6
+    >{{movie.name}}</h6></div>
+
+  <div class="head11">
+    <div class="head111"><p>Release Date</p></div>
+    <div class="head111"><p>Language</p></div>
+    <div class="head111"><p>Genre</p></div>
+
+  </div>
+  <div class="head11">
+    <div class="head1111">{{#if movie.releasedate}}
+        <p>{{movie.releasedate}}</p>{{else}}
+        <p>Date Not Confirm</p>
+      {{/if}}
+    </div>
+    <div class="head1111"><p>{{movie.category}}</p></div>
+    <div class="head1111"><p>{{movie.genre}}</p></div>
+
+  </div>
+
+  <!----------------Actors-->
+  <div class="basic-head"><h4>Actors</h4></div>
+  <div class="swiper">
+    <div class="actor-swp">
+      <div class="actorswp">
+        <a href="/actor/{{movie.actid1}}"><img
+            class="lazy-photo"
+            data-src="/images/actor-posters/{{movie.actid1}}.jpg"
+            alt=""
+          />
+          <h6>{{movie.actorname1}}</h6>
+          <p>{{movie.mvactorname1}}</p>
+        </a>
       </div>
-      
-      </div>
-      
-      <div class="mv-head"><i class="material-icons">star</i><h6>{{movie.name}}</h6></div>
-      
-       <div class="head11">
-       <div class="head111"><p>Release Date</p></div>
-        <div class="head111"><p>Language</p></div>
-         <div class="head111"><p>Genre</p></div>
-        
-      </div>
-      <div class="head11">
-       <div class="head1111">{{#if movie.releasedate}} <p>{{movie.releasedate}}</p>{{else}}
-       <p>Date Not Confirm</p>
-       {{/if}}
-       </div>
-        <div class="head1111"><p>{{movie.category}}</p></div>
-         <div class="head1111"><p>{{movie.genre}}</p></div>
-        
-      </div>
-      
-     
-      <!----------------Actors-->
-      <div class="basic-head"><h4>Actors</h4></div>
-        <div class="swiper">
-          <div class="actor-swp">
-            <div class="actorswp">
-            <a href="/actor/{{movie.actid1}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid1}}.jpg" alt="">
-            <h6>{{movie.actorname1}}</h6>
-            <p>{{movie.mvactorname1}}</p>
-            </a>
-            </div>
-            {{#if movie.actid2}}
-            <div class="actorswp">
-            <a href="/actor/{{movie.actid2}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid2}}.jpg" alt="">
+      {{#if movie.actid2}}
+        <div class="actorswp">
+          <a href="/actor/{{movie.actid2}}"><img
+              class="lazy-photo"
+              data-src="/images/actor-posters/{{movie.actid2}}.jpg"
+              alt=""
+            />
             <h6>{{movie.actorname2}}</h6>
             <p>{{movie.mvactorname2}}</p>
-            </a>
-            </div>
-            {{/if}}
-            {{#if movie.actid3}}
-             <div class="actorswp">
-            <a href="/actor/{{movie.actid3}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid3}}.jpg" alt="">
+          </a>
+        </div>
+      {{/if}}
+      {{#if movie.actid3}}
+        <div class="actorswp">
+          <a href="/actor/{{movie.actid3}}"><img
+              class="lazy-photo"
+              data-src="/images/actor-posters/{{movie.actid3}}.jpg"
+              alt=""
+            />
             <h6>{{movie.actorname3}}</h6>
             <p>{{movie.mvactorname3}}</p>
-            </a>
-            </div>
-            {{/if}}
-            {{#if movie.actid4}}
-             <div class="actorswp">
-            <a href="/actor/{{movie.actid4}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid4}}.jpg" alt="">
+          </a>
+        </div>
+      {{/if}}
+      {{#if movie.actid4}}
+        <div class="actorswp">
+          <a href="/actor/{{movie.actid4}}"><img
+              class="lazy-photo"
+              data-src="/images/actor-posters/{{movie.actid4}}.jpg"
+              alt=""
+            />
             <h6>{{movie.actorname4}}</h6>
             <p>{{movie.mvactorname4}}</p>
-            </a>
-            </div>
-            {{/if}}
-            {{#if movie.actid5}}
-             <div class="actorswp">
-            <a href="/actor/{{movie.actid5}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid5}}.jpg" alt="">
+          </a>
+        </div>
+      {{/if}}
+      {{#if movie.actid5}}
+        <div class="actorswp">
+          <a href="/actor/{{movie.actid5}}"><img
+              class="lazy-photo"
+              data-src="/images/actor-posters/{{movie.actid5}}.jpg"
+              alt=""
+            />
             <h6>{{movie.actorname5}}</h6>
             <p>{{movie.mvactorname5}}</p>
-            </a>
-            </div>
-            {{/if}}
-            {{#if movie.actid6}}
-             <div class="actorswp">
-            <a href="/actor/{{movie.actid6}}"><img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid6}}.jpg" alt="">
+          </a>
+        </div>
+      {{/if}}
+      {{#if movie.actid6}}
+        <div class="actorswp">
+          <a href="/actor/{{movie.actid6}}"><img
+              class="lazy-photo"
+              data-src="/images/actor-posters/{{movie.actid6}}.jpg"
+              alt=""
+            />
             <h6>{{movie.actorname6}}</h6>
             <p>{{movie.mvactorname6}}</p>
-            </a>
-            </div>
-            {{/if}}
-            
-          </div>
-          
+          </a>
         </div>
-     
-      <div class="mv-details-section">
-        
-          <div class="head11">
-       <div class="head111"><p>Length</p></div>
-        <div class="head111"><p>Director</p></div>
-         <div class="head111"><p>producedby</p></div>
-        
-      </div>
-      <div class="head11">
-       <div class="head1111"><p>{{movie.duration}}</p></div>
-        <div class="head1111"><p>{{movie.director}}</p></div>
-         <div class="head1111"><p>{{movie.producedby}}</p></div>
-        
-      </div>
-      
-      
-        <div class="story">
-          <div class="story-h"><p>Story: {{#if movie.storyenglish}}<span class="readmore-btn-english">English</span>{{/if}}</p></div>
-          <div class="story-p">
-            <p>
-                {{movie.story}}
-            </p>
-            <div class="story-readmore-english">
-            
-                <span class="closee-english"> &#10006; </span>
-                
-                <p>
-                  {{movie.storyenglish}}
-                </p>
-            </div>
-            {{#if movie.readmorestory}}
-            <span class="readmore-btn">Read More</span>{{/if}}
-  <div class="story-readmore">
+      {{/if}}
 
-    <span class="closee"> &#10006; </span>
-    
-    <p>{{movie.readmorestory}}</p>
-</div>
-          </div>
-        </div>
-      </div>
-        <div class="share-link">
-        <h4>Share With:</h4> 
-        <a href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   " data-action="share/tg/share" class="share-tele" ><i class="fa fa-telegram" aria-hidden="true"></i></a>
-        <a href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite" data-action="share/whatsapp/share" class="share-whats" ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-      </div>
-       <div class="basic-head"><h4>Video</h4> </div>
-      <div class="swiper">
-        {{#if movie.ytlink}}
-          <div class="video-row">
-            <iframe class="lazy-photo" data-src="{{movie.ytlink}}" frameborder="0" allow="autoplay"  allowfullscreen></iframe>
-          </div>
-          {{else}}
-          <div class="basic-head"><h4 style="color: black;">Not Video Release</h4> </div>
-          {{/if}}
-          {{#if movie.ytlink1}}
-          <div class="video-row">
-            <iframe class="lazy-photo" data-src="{{movie.ytlink1}}" frameborder="0" allow="autoplay"  allowfullscreen></iframe>
-          </div>
-          {{/if}}
-          {{#if movie.ytlink2}}
-          <div class="video-row">
-            <iframe class="lazy-photo" data-src="{{movie.ytlink2}}" frameborder="0" allow="autoplay"  allowfullscreen></iframe>
-          </div>
-          {{/if}}
-          {{#if movie.ytlink3}}
-          <div class="video-row">
-            <iframe class="lazy-photo" data-src="{{movie.ytlink3}}" frameborder="0" allow="autoplay"  allowfullscreen></iframe>
-          </div>
-          {{/if}}
-      </div>
-      
     </div>
-     <!--------------------------------------Next Week Reales--------------------------------->
-     
-    <div class="black-header">
-          <i class="material-icons">next_week</i>
-          Next Week Release
-        </div>
-    <div class="swiper">
-      <div class="latest-movies-section">
-        {{#each nextweekmovies}}
-      <a href="/movie/{{this.movieid}}" class="latest-update-movies">
-        <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="">
-        <H4>{{this.moviename}}</H4>
-        <p>{{this.moviereleasedate}}</p>
-      </a>
-      {{/each}}
-    </div>
-    </div>
-     <!-----------------------------------Trnding Movies------------------------------------------>
-    <div class="black-header">
-      <i class="material-icons">trending_up</i>
-      Trending Movies
-    </div>
-<div class="swiper">
-  <div class="latest-movies-section">
-    {{#each trendingmovies}}
-    <a href="/movie/{{this._id}}" class="movies-list">
-      <div class="movies-img">
-        <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
-      </div>
-    <div class="movies-body">
-      <p>{{this.name}}</p>
-    </div>  
-    
-    </a>
-    {{/each}}
+
   </div>
+
+  <div class="mv-details-section">
+
+    <div class="head11">
+      <div class="head111"><p>Length</p></div>
+      <div class="head111"><p>Director</p></div>
+      <div class="head111"><p>producedby</p></div>
+
+    </div>
+    <div class="head11">
+      <div class="head1111"><p>{{movie.duration}}</p></div>
+      <div class="head1111"><p>{{movie.director}}</p></div>
+      <div class="head1111"><p>{{movie.producedby}}</p></div>
+
+    </div>
+
+    <div class="story">
+      <div class="story-h"><p>Story:
+          {{#if movie.storyenglish}}<span
+              class="readmore-btn-english"
+            >English</span>{{/if}}</p></div>
+      <div class="story-p">
+        <p>
+          {{movie.story}}
+        </p>
+        <div class="story-readmore-english">
+
+          <span class="closee-english"> &#10006; </span>
+
+          <p>
+            {{movie.storyenglish}}
+          </p>
+        </div>
+        {{#if movie.readmorestory}}
+          <span class="readmore-btn">Read More</span>{{/if}}
+        <div class="story-readmore">
+
+          <span class="closee"> &#10006; </span>
+
+          <p>{{movie.readmorestory}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="share-link">
+    <h4>Share With:</h4>
+    <a
+      href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   "
+      data-action="share/tg/share"
+      class="share-tele"
+    ><i class="fa fa-telegram" aria-hidden="true"></i></a>
+    <a
+      href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite"
+      data-action="share/whatsapp/share"
+      class="share-whats"
+    ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+  </div>
+  <div class="basic-head"><h4>Video</h4> </div>
+  <div class="swiper">
+    {{#if movie.ytlink}}
+      <div class="video-row">
+        <iframe
+          class="lazy-photo"
+          data-src="{{movie.ytlink}}"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {{else}}
+      <div class="basic-head"><h4 style="color: black;">Not Video Release</h4>
+      </div>
+    {{/if}}
+    {{#if movie.ytlink1}}
+      <div class="video-row">
+        <iframe
+          class="lazy-photo"
+          data-src="{{movie.ytlink1}}"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {{/if}}
+    {{#if movie.ytlink2}}
+      <div class="video-row">
+        <iframe
+          class="lazy-photo"
+          data-src="{{movie.ytlink2}}"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {{/if}}
+    {{#if movie.ytlink3}}
+      <div class="video-row">
+        <iframe
+          class="lazy-photo"
+          data-src="{{movie.ytlink3}}"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {{/if}}
+  </div>
+
 </div>
-
-    <script>
-      //Trailor Popup
-   const btn =document.querySelector('.trailor-btn');
-   const videoContainer=document.querySelector('.video-container');
-   const close =document.querySelector('.close');
-   
-   
-   btn.addEventListener('click',()=>{
-       videoContainer.classList.add('show')
-   })
-   close.addEventListener('click',()=>{
-       videoContainer.classList.remove('show')
-   })
-
-
-   const btnenglish =document.querySelector('.readmore-btn-english');
-   const storyContainerenglish=document.querySelector('.story-readmore-english');
-   const closenglish =document.querySelector('.closee-english');
-   
-   
-   btnenglish.addEventListener('click',()=>{
-    storyContainerenglish.classList.add('show')
-   })
-   closenglish.addEventListener('click',()=>{
-    storyContainerenglish.classList.remove('show')
-   })
-    </script>
-    
-    
-   
-   
-     
-
-   
-    
-
-  
-
