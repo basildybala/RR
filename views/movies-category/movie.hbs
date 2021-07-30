@@ -1,3 +1,6 @@
+<title>{{movie.engname}}({{movie.name}}){{movie.category}}HD Full Movie Download</title>
+
+
 <!--------------------------------Movies Categories Swipe---------------------->
       <div class="nav-bar-sticky ">
         
@@ -17,25 +20,25 @@
       </div>
      <!-----------------------------------Latest Update------------------------------------------>
     <div class="black-header">
-      <i class="material-icons">local_movies</i>
+      <i class="fas fa-pen-alt"></i>
       Latest Update
     </div>
-<div class="swiper">
-  <div class="latest-movies-section">
-    {{#each latestupdatemovies}}
-    <a href="/movie/{{this._id}}" class="movies-list">
-      <div class="movies-img">
-        <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+    <div class="swiper">
+      <div class="latest-movies-section">
+        {{#each latestupdatemovies}}
+        <a href="/movie/{{this._id}}" class="movies-list">
+          <div class="movies-img">
+            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+          </div>
+        <div class="movies-body">
+          <p>{{this.name}}</p>
+          <h6>( {{this.engname}} )</h6>
+        </div>  
+        
+        </a>
+        {{/each}}
       </div>
-    <div class="movies-body">
-      <p>{{this.name}}</p>
-      <h6>( {{this.engname}} )</h6>
-    </div>  
-    
-    </a>
-    {{/each}}
-  </div>
-</div>
+    </div>
  
 
 
@@ -298,3 +301,46 @@
 
 </div>
 </div>
+
+<!------------------------Trending Movies--------------------------------------->
+    <div class="black-header">
+     <i class="fas fa-bolt"></i>
+      Trending Movies
+    </div>
+    <div class="swiper">
+      <div class="latest-movies-section">
+        {{#each trendingmovies}}
+        <a href="/movie/{{this._id}}" class="movies-list">
+          <div class="movies-img">
+            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+          </div>
+        <div class="movies-body">
+          <p>{{this.name}}</p>
+          <h6>( {{this.engname}} )</h6>
+        </div>  
+        
+        </a>
+        {{/each}}
+      </div>
+    </div>
+    <!------------------------Nextweek Movies--------------------------------------->
+    <div class="black-header">
+     <i class="fas fa-calendar-week"></i>
+      Nextweek Movies
+    </div>
+    <div class="swiper">
+      <div class="latest-movies-section">
+        {{#each nextweekmovies}}
+        <a href="/movie/{{this.movieid}}" class="movies-list">
+          <div class="movies-img">
+            <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="" srcset="">
+          </div>
+        <div class="movies-body">
+          <p>{{this.moviename}}</p>
+          <h6>{{this.moviereleasedate}}</h6>
+        </div>  
+        
+        </a>
+        {{/each}}
+      </div>
+    </div>
