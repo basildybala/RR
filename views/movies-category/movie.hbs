@@ -81,24 +81,88 @@
   <div class="mv-head"><i class="fas fa-star"></i><h6
     >{{movie.name}}</h6></div>
 
-  <div class="head11">
-    <div class="head111"><p>Release Date</p></div>
-    <div class="head111"><p>Language</p></div>
-    <div class="head111"><p>Genre</p></div>
+  <div class="mv-details-section">
+    <div class="basic-head">
+            <h4>Details</h4>
+          </div>
+          <div class="details">
+            
+            <div class="details-col">
+              <h5>Language:</h5>
+              <p>{{movie.category}}</p>
+            </div>
+            <div class="details-col">
+              <h5>Genre:</h5>
+              <p>{{movie.genre}}</p>
+            </div>
+            <div class="details-col">
+              <h5>Director:</h5>
+              <p>{{movie.director}}</p>
+            </div>
+            <div class="details-col">
+              <h5>Produced By:</h5>
+              <p>{{movie.producedby}}</p>
+            </div>
+            <div class="details-col">
+              <h5>Release Date:</h5>
+              {{#if movie.releasedate}}
+                <p>{{movie.releasedate}}</p>{{else}}
+                <p>Date Not Confirm</p>
+              {{/if}}
+            </div>
+            <div class="details-col">
+              <h5>Length:</h5>
+              <p>{{movie.duration}}</p>
+            </div>
+          </div>
+
+
+<!----------------Story------------->
+ <div class="story">
+            <div class="basic-head">
+              <h4>Story</h4>
+            </div>
+            <div class="story-p">
+              <p>
+               {{movie.story}}
+              </p>
+              
+             <div class="story-readmore-english">
+            
+                <span class="closee-english"> &#10006; </span>
+                
+                <p>
+                 {{movie.storyenglish}}
+                </p>
+            </div>
+              {{#if movie.readmorestory}}
+               <span class="readmore-btn">Read More</span>
+              {{/if}}
+              {{#if movie.storyenglish}}
+               <span class="readmore-btn-english">English</span>
+              {{/if}}
+       <div class="story-readmore">
+         <span class="closee"> &#10006; </span>
+          <p>
+             {{movie.readmorestory}}
+          </p>
+     </div>
 
   </div>
-  <div class="head11">
-    <div class="head1111">{{#if movie.releasedate}}
-        <p>{{movie.releasedate}}</p>{{else}}
-        <p>Date Not Confirm</p>
-      {{/if}}
-    </div>
-    <div class="head1111"><p>{{movie.category}}</p></div>
-    <div class="head1111"><p>{{movie.genre}}</p></div>
-
+  <div class="share-link">
+    <h4>Share With:</h4>
+    <a
+      href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   "
+      data-action="share/tg/share"
+      class="share-tele"
+    ><i class="fa fa-telegram" aria-hidden="true"></i></a>
+    <a
+      href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite"
+      data-action="share/whatsapp/share"
+      class="share-whats"
+    ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
   </div>
-
-  <!----------------Actors-->
+<!----------------Actors-->
   <div class="basic-head"><h4>Actors</h4></div>
   <div class="swiper">
     <div class="actor-swp">
@@ -177,66 +241,14 @@
 
   </div>
 
-  <div class="mv-details-section">
 
-    <div class="head11">
-      <div class="head111"><p>Length</p></div>
-      <div class="head111"><p>Director</p></div>
-      <div class="head111"><p>producedby</p></div>
+  <!-------------------------------------VIDEO SECTION------------------------->
 
-    </div>
-    <div class="head11">
-      <div class="head1111"><p>{{movie.duration}}</p></div>
-      <div class="head1111"><p>{{movie.director}}</p></div>
-      <div class="head1111"><p>{{movie.producedby}}</p></div>
-
-    </div>
-
-    <div class="story">
-      <div class="story-h"><p>Story:
-          {{#if movie.storyenglish}}<span
-              class="readmore-btn-english"
-            >English</span>{{/if}}</p></div>
-      <div class="story-p">
-        <p>
-          {{movie.story}}
-        </p>
-        <div class="story-readmore-english">
-
-          <span class="closee-english"> &#10006; </span>
-
-          <p>
-            {{movie.storyenglish}}
-          </p>
-        </div>
-        {{#if movie.readmorestory}}
-          <span class="readmore-btn">Read More</span>{{/if}}
-        <div class="story-readmore">
-
-          <span class="closee"> &#10006; </span>
-
-          <p>{{movie.readmorestory}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="share-link">
-    <h4>Share With:</h4>
-    <a
-      href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   "
-      data-action="share/tg/share"
-      class="share-tele"
-    ><i class="fa fa-telegram" aria-hidden="true"></i></a>
-    <a
-      href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite"
-      data-action="share/whatsapp/share"
-      class="share-whats"
-    ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-  </div>
-  <div class="basic-head"><h4>Video</h4> </div>
+    <div class="basic-head"><h4>Video</h4> </div>
   <div class="swiper">
-    {{#if movie.ytlink}}
+     {{#if movie.ytlink}}
       <div class="video-row">
+       
         <iframe
           class="lazy-photo"
           data-src="{{movie.ytlink}}"
@@ -246,7 +258,7 @@
         ></iframe>
       </div>
     {{else}}
-      <div class="basic-head"><h4 style="color: black;">Not Video Release</h4>
+      <h4 style="color: black;font-family:sans-serif">Not Video Release</h4>
       </div>
     {{/if}}
     {{#if movie.ytlink1}}
@@ -284,4 +296,5 @@
     {{/if}}
   </div>
 
+</div>
 </div>

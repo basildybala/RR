@@ -40,4 +40,9 @@
    closenglish.addEventListener('click',()=>{
     storyContainerenglish.classList.remove('show')
    })
+   //Search Google
+   function searchit() {
+      document.getElementById("hp").href=(("https://www.google.com/search?q=site:dramalite.com ")+
+      (document.getElementById("linkit").value));
+    }
  

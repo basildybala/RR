@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: whitesmoke;
+    background-color: #ecf1ffb5;
 }
 
 /*-----------------------Header Mwnu------------------*/
@@ -20,37 +20,37 @@ body{
     align-items: center;
 }
 /*--------------------Search Box------------------*/
-.search-box{
+.search-item{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
-    
 }
-.search-box1{
+
+.search-button{
+    height: 32px;
+    border: 1px solid black;
+    width: 75px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    background: #4c4747;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    border: none;
 }
-.search-box1 input{
-    order: 2px solid black;
-    width: 60%;
-    height: 25px;
-    background: white;
+.search-button a{
+  text-decoration: none;
+  color: white;
 }
-.search-box1 button{
-    width: 16%;
-    height: 30px;
-    background: black;
-    border-radius: 10px;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;cursor: pointer;
-}
-.search-box1 button:hover{
-    background-color: rgb(10, 9, 9);
-}
+.search-bar input{
+    width: 230px;
+    height:32px;
+    font-size: 13px;
+    padding: 0px 10px;
+    border-radius: 25px 0 0 25px;
+    background: #e0dede;
+    border: none;
+  }
 
 /*upcoming section*/
 .black-header{
@@ -69,83 +69,6 @@ body{
     margin-right: 5px;
 }
 
-
-/* .up-list{
-    padding: 10px 5px;
-    background-color: #ffffff;
-    stroke-width: 5px;
-    stroke-opacity: 13%;
-    border: rgb(209, 207, 207) solid;
-    
-    
-  }
-  .up-list1{
-    text-decoration: none;
-    display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color:  #E6E6E6;
-      padding: 1px;
-      border-radius: 5px;
-      height: 209px;
-      
-  }
-  .up-list img{
-    width: 100px;
-    height: 133px;
-    display: block;
-  }
-  .table-upcoming-list{
-      margin: auto;
-      background-color: white;
-  }
-  
-  .upcmng-movie-header{
-      
-      
-      color: rgb(19, 18, 18);
-      width:100%;
-      text-align: center;
-      height: 25px;
-     
-    
-  }
-  .upcmng-movie-header h3{
-    font-size: 14px;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-}
-.uplist-det{
-    color: rgb(252, 54, 19);
-    font-size: 12px;
-    margin: 2px 1px;
-    width: 100%;
-    margin: 0;
-   
-}
-.uplist-det i{
-    color: black;
-    font-size: 15px;
-    margin: 1px 2px;
-  
-}
-.uplist2{
-    display: flex;
-}
-.up-list p{
-    color: black;
-    margin: 1px;
-    padding: 0;
-    font-family: 'Varela Round', sans-serif;
-
-}
-.uplist2 h4{
-    margin: 2px;
-    font-family: 'Varela Round', sans-serif;
-
-} */
 .white-link{
     height: 30px;
     width: 100%;
@@ -170,11 +93,13 @@ body{
 .main{
     
     overflow: hidden;
-    width: 100%;
-    /* height: 530px; */
+    width: 96%;
+    margin-left: 2%;
     margin: 30px auto;
     background-color: white;
-    box-shadow: 0px 20px 100px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,.14);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    border-radius: 4px;
 
 }
 .movie-img{
@@ -182,7 +107,7 @@ body{
     position: relative;
 }
 .backimg{
-    height: 190px;
+    height: 235px;
     width: 100%;
     border-radius: 20px;
    
@@ -193,10 +118,10 @@ body{
 }
 .movie-cover{
     position: absolute;
-    height: 150px;
+    height: 160px;
     max-width: 135px;
     bottom: -58px;
-    left: 26px;
+    left: 23px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px rgb(0,0,0,0.1);
 }
@@ -239,7 +164,7 @@ body{
    font-size: 10px; 
 }
 .mv-head{
-    margin-left: 138px;
+    margin-left: 160px;
     text-transform: capitalize;
     margin-top: 15px;
     margin-bottom: 33px;
@@ -281,7 +206,7 @@ body{
 
 
 .head1111{
-    margin-top: 10px;
+    margin: 6px 0;
     width: 110px;
 }
 .head1111 p{
@@ -339,17 +264,21 @@ body{
 }
 
 .basic-head{
-    border-top: 1px solid #a09292;
-    
-    color: rgb(0,0,0,0.7);
-    font-family: sans-serif;
     font-size: 0.9em;
-    font-weight: 800;  
-    margin-top: 10px;
+    margin-top: 7px;
+    width: 82px;
+    height: 27px;
+    background-color: rgb(76 71 71);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-left: 1%;
 }
 .basic-head h4{
-    margin: 4px 8px;
-    color: rgb(252, 54, 19);
+    color: rgb(255, 255, 255);
     font-family: 'Varela Round', sans-serif;
 }
 .head3{
@@ -369,12 +298,8 @@ body{
     font-size: 0.8em;
 }
 .story{
-    
-    border-top: 1px solid #a09292;
-    
     width: 100%;
     margin: auto;
-    
     position: relative;
     height: auto;
 }
@@ -391,9 +316,8 @@ body{
     width: 100%;
 }
 .story-p p{
-    width: 100%;
     text-overflow: ellipsis;
-    color: rgba(17, 16, 16, 0.7);
+    font-weight: 500;
     font-family: 'manjari';
     font-size: 15px;
     margin-left: 8px;
@@ -661,6 +585,9 @@ margin: 2px;
     background-color: #1c1c1cdb;
     
 }
+.movies-img{
+    width: 120px;
+}
 .movies-img img{
     width: 100%;
     height:135px ;
@@ -689,10 +616,13 @@ margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 87px;
+    width: 90px;
     margin: 2px 2px;
     height: 142px;
     background-color: #1c1c1cdb;
+}
+.movies-img-latestupdate{
+    width: 90px;
 }
 .movies-img-latestupdate img{
     width: 100%;
@@ -722,13 +652,12 @@ margin: 2px;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-bottom: 1px solid #a09292;
-    
 }
 .swiper::-webkit-scrollbar{
     display: none;
 }
 .actorswp{
+    border: 1px solid rgba(0,0,0,.14);
     width: 95px;
     height: 150px;
     overflow: hidden;
@@ -764,20 +693,17 @@ margin: 2px;
 .actor-swp{
     display: flex;
     margin-left: 5px;
-    
 }
 /*Story Readmore*/
 
 .story-readmore{
     position: absolute;
-      top: 0%;
-      left: 0%;
-      height: auto;
-      background-color: #eee;
-
-      padding: 15px;
-      border: 1px solid red;
-    
+    top: 0%;
+    left: 0%;
+    height: auto;
+    background-color: #eee;
+    padding: 15px;
+    border: 1px solid red;
     opacity: 0;
     pointer-events: none;
     transition: all 0.5 ;
@@ -811,15 +737,16 @@ margin: 2px;
   }
   
   .readmore-btn{
+    color: blue;
     text-align: center;
     display: inline-block;
     padding: 3px 9px;
-    border: 1px solid  rgb(41, 33, 32);;
+    border: 1px solid rgb(41, 33, 32);
     cursor: pointer;
     overflow: hidden;
-      font-family: 'Varela Round', sans-serif;
-      font-size: 11px;
-      margin-left: 8px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 11px;
+    margin-left: 8px;
   }
   /*Movis Categories Swiper */
   .nav-bar-sticky{
@@ -869,17 +796,16 @@ margin: 2px;
   /*ACTOR FILM*/
   .actor-header{
     width: 100%;
-    height: 30px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #f9f9f9;
-    font-weight: 800;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    
-    background-color: rgb(252, 54, 19);
-    border: 3px solid #554343;
+    background-color: rgb(76 71 71);
+    border: 3px solid #443c3c;
   }
   .actor-film{
       display: flex;
@@ -979,6 +905,10 @@ margin: 2px;
     font-size: 13px;
     font-family: sans-serif;
     margin-top: 6px;
+
+   }
+   .end-copyright span{
+    font-family: sans-serif;
    }
    .share-link{
      margin-top: 9px;
@@ -1048,16 +978,36 @@ margin: 2px;
   }
   
   .readmore-btn-english{
+    color: blue;
     text-align: center;
     display: inline-block;
     padding: 3px 9px;
     border: 1px solid rgb(41, 33, 32);
     cursor: pointer;
+    overflow: hidden;
     font-family: 'Varela Round', sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     margin-left: 8px;
-    color: blue;
   }
+
+  /*Details Section Added*/
+  .details{
+    margin-left: 1%;
+}
+.details-col{
+    display: flex;
+}
+.details-col h5{
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: 'Varela Round', sans-serif;
+    margin: 1px;
+}
+.details-col p{
+    margin: 1px 7px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
 @media(min-width: 767px){
     .site-logo img{
         width: 61%;
@@ -1087,6 +1037,7 @@ margin: 2px;
         border-radius: 15%;
         margin-right: 5px;
     }
+    
     
     .movies-img img{
         width: 100%;
