@@ -16,6 +16,18 @@ router.get('/', function(req, res, next) {
   }) 
   
 });
+// router.get('/movie/:id', (req,res)=>{
+//   getHelp.getLatestUpdate(req,res).then((latestupdatemovies)=>{
+//     getHelp.getLatestNextweek(req,res).then((nextweekmovies)=>{
+//       getHelp.getTrendingMovies(req,res).then(async(trendingmovies)=>{
+//        let movie=await movieHelpers.getOneMovie(req.params.id)
+//        res.render('movies-category/movie',{movie,latestupdatemovies,nextweekmovies,trendingmovies})
+//       })
+//     })
+//   })
+// });
+
+
 router.get('/movie/:id', (req,res)=>{
   getHelp.getLatestUpdate(req,res).then((latestupdatemovies)=>{
     getHelp.getLatestNextweek(req,res).then((nextweekmovies)=>{
