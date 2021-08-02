@@ -10,7 +10,7 @@ module.exports={
     getMalayalamMovies:(req,res)=>{
         
         return new Promise(async(resolve,reject)=>{
-            const {page=1,limit=10}=req.query;
+            const {page=1,limit=30}=req.query;
             let malayalamMovies=await db.get().collection(collection.MOVIES_COLLECTION).find({category:'Malayalam'}).sort({_id:-1}).limit(limit*1).skip((page-1)*limit).toArray()
             resolve(malayalamMovies)
         })

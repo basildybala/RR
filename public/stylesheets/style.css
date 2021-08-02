@@ -42,7 +42,7 @@ body{
 }
 /*--------------------Search Box------------------*/
 .search-bar{
-    margin-top: 20px;
+    margin: 13px 0;
 }
 .search-item{
     display: flex;
@@ -96,9 +96,7 @@ body{
 .white-link{
     height: 30px;
     width: 100%;
-    border-bottom: 1px solid black
-    
-    
+    border-bottom: 1px solid black   
 }
 
 .dflexx{
@@ -115,7 +113,6 @@ body{
 
 /*Movie section*/
 .main{
-    
     overflow: hidden;
     width: 96%;
     margin-left: 2%;
@@ -126,7 +123,7 @@ body{
     border-radius: 4px;
 
 }
-.movie-img{
+.movies-images{
     padding: 10px 10px;
     position: relative;
 }
@@ -187,7 +184,7 @@ body{
 .fa-trailor p{
    font-size: 10px; 
 }
-.mv-head{
+.movies-malayalam-header{
     margin-left: 160px;
     text-transform: capitalize;
     margin-top: 15px;
@@ -197,16 +194,16 @@ body{
     display: flex;
     align-items: center;
 }
-.mv-head i{
+.movies-malayalam-header i{
     color: rgb(252, 54, 19);
     font-size: 18px;
 }
-.mv-head h6{
+.movies-malayalam-header h6{
     margin: 0 2px;
     color: rgb(0 0 0 / 70%);
     font-family: 'manjari';
 }
-
+/* 
 .head11{
     display: flex;
     align-items: center;
@@ -240,7 +237,7 @@ body{
     font-weight: 700;
     margin-top: 10px;
     margin: 0;
-}
+} */
 
 /*Video Secton*/
 
@@ -305,7 +302,7 @@ body{
     color: rgb(255, 255, 255);
     font-family: 'Varela Round', sans-serif;
 }
-.head3{
+/* .head3{
     display: flex;
     margin: 7px 4px;
     align-items: center;
@@ -320,14 +317,14 @@ body{
     color: rgba(17, 16, 16, 0.7);
     font-family: sans-serif;
     font-size: 0.8em;
-}
-.story{
+} */
+.movie-story{
     width: 100%;
     margin: auto;
     position: relative;
     height: auto;
 }
-.story-h p{
+/* .story-h p{
     color: rgb(252, 54, 19);
     font-family: 'Varela Round', sans-serif;
     font-size: 0.8em; 
@@ -335,7 +332,7 @@ body{
     margin-bottom: 0;
     margin-top: 5px;
     
-}
+} */
 .story-p{
     width: 100%;
 }
@@ -823,7 +820,7 @@ margin: 2px;
   }
 
   /*ACTOR FILM*/
-  .actor-header{
+  .movies-english-header{
     width: 100%;
     height: 34px;
     display: flex;
@@ -877,7 +874,6 @@ margin: 2px;
     overflow: hidden;
     margin: 6px;
     border: 1px solid black;
-
   }
   .latest-update-movies img{
     width: 100%;
@@ -892,8 +888,6 @@ margin: 2px;
     font-family: sans-serif;
     font-weight: 700;
     text-align: center;
-
-
   }
   .latest-update-movies p{
     margin: 0;
@@ -906,8 +900,7 @@ margin: 2px;
   .end-container{
     background-color: rgb(54 46 46);
     width: 100%;
-    padding: 10px;
-    
+    padding: 5px;
    }
    .connect-social{
      display: flex;
@@ -931,14 +924,11 @@ margin: 2px;
     justify-content: center;
     display: flex;
     color: white;
-    font-size: 13px;
-    font-family: sans-serif;
-    margin-top: 6px;
+    font-size: 12px;
+    font-family: 'Varela Round';
+    margin-top: 2px;
+   }
 
-   }
-   .end-copyright span{
-    font-family: sans-serif;
-   }
    .share-link h5{
     font-weight: bolder;
     font-size: 14px;
@@ -968,27 +958,25 @@ margin: 2px;
    /*Story ENGLISH*/
 
 .story-readmore-english{
-    position: absolute;
+      position: absolute;
       top: 0%;
       left: 0%;
       height: auto;
       background-color: #eee;
-
       padding: 15px;
       border: 1px solid red;
-    
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5 ;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.5 ;
   
   }
-  .story-readmore-english p{
+ .story-readmore-english p{
     letter-spacing: 1px;
     font-family: sans-serif;
     font-weight: 500;
     font-size: 12px;
   }
-  .closee-english{
+.closee-english{
     position: absolute;
     top: 0;
       right: 0;
@@ -997,13 +985,11 @@ margin: 2px;
     color: red;
     z-index: 999919;
     font-weight: 900;
-  
-  }
+   }
     
   .story-readmore-english.show{
     pointer-events: all;
     opacity: 1;
-  
   }
   .story-readmore-english.show {
     transform: scale(1);
@@ -1086,6 +1072,53 @@ margin: 2px;
     color: #4267B2;
     margin-left: 4px;
 }
+
+/*Terms Conditions & Privacy Policy*/
+.terms-condition-sub-header{
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
+    margin: 15px 3px;
+}
+.terms-condition p{
+    margin: 11px 7px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+.terms-condition ul li{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px;
+}
+.privacy-policy-sub-header{
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
+    margin: 15px 3px;
+}
+.privacy-policy p{
+    margin: 11px 7px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+.privacy-policy ul li{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px;
+}
+.footer-privacy{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 7px;
+}
+.footer-privacy a{
+    color: white;
+    font-family: 'Varela Round';
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 @media(min-width: 767px){
     .site-logo img{
         width: 61%;
@@ -1206,9 +1239,9 @@ margin: 2px;
 }
 .movies-body-latestupdate p{
     margin: 0px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Varela Round';
-    font-weight: 500;
+    font-weight: 600;
     font-size: 10px;   
 }
 

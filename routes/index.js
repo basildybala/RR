@@ -89,51 +89,54 @@ router.get('/actors', function(req, res, next) {
     res.render('actor/actors-show',{actor});
   })
 });
-//ONE Movie Show
-// router.get('/movie/:id',async (req,res)=>{
-//   let movie=await movieHelpers.getOneMovie(req.params.id)
-//   res.render('movies-category/movie',{movie})
-// });
+
 //ONE ACTOR
 router.get('/actor/:id',async (req,res)=>{
   let actor=await movieHelpers.getOneActor(req.params.id)
   res.render('actor/actor',{actor})
 });
 
-
+//Terms and Conditions
+router.get('/terms-conditions', function(req, res, next) {
+    res.render('partials/terms-condtions')
+});
+//Privacy Policy
+router.get('/privacy-policy', function(req, res, next) {
+  res.render('partials/privacy-policy')
+});
 
 //pagination
-function paginatedResults(model){
-  return async (req,res,next)=>{
-      const page=parseInt(req.query.page)
-  const limit=parseInt(req.query.limit)
+// function paginatedResults(model){
+//   return async (req,res,next)=>{
+//       const page=parseInt(req.query.page)
+//   const limit=parseInt(req.query.limit)
 
   
-  const startIndex=(page - 1)* limit
-  const endIndex=page*limit
-  const results={}
-  if(endIndex< await model.countDocument().exec()){
-      results.next={
-          page:page+1,
-          limit:limit
-      }
-  }
+//   const startIndex=(page - 1)* limit
+//   const endIndex=page*limit
+//   const results={}
+//   if(endIndex< await model.countDocument().exec()){
+//       results.next={
+//           page:page+1,
+//           limit:limit
+//       }
+//   }
 
-  if(startIndex>0){
-  results.previous={
-      page:page-1,
-      limit:limit
-  }
-}
-try{
-  results.results= await model.find().limit(limit).skip(startIndex).exec()
-  res.paginatedResults =results
-  next()
-} catch(e) {
-  res.status(500).json({message:e.message})
-}
-  }
-}
+//   if(startIndex>0){
+//   results.previous={
+//       page:page-1,
+//       limit:limit
+//   }
+// }
+// try{
+//   results.results= await model.find().limit(limit).skip(startIndex).exec()
+//   res.paginatedResults =results
+//   next()
+// } catch(e) {
+//   res.status(500).json({message:e.message})
+// }
+//   }
+// }
 
 
 

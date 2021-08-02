@@ -155,10 +155,6 @@ module.exports={
                     filmname13:actorDetails.filmname13,
                     filmname14:actorDetails.filmname14,
                     filmname15:actorDetails.filmname15,
-
-
-                    
-
                 }
             }).then((response)=>{
                 resolve()
