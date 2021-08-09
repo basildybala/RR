@@ -43,6 +43,13 @@ module.exports={
             resolve(hollywoodMovies)
         })
     },
+    getWebSeries:(req,res)=>{
+        return new Promise(async(resolve,reject)=>{
+            const {page=1,limit=30}=req.query;
+            let webSeries=await db.get().collection(collection.MOVIES_COLLECTION).find({category:'Webseries'}).sort({_id:-1}).limit(limit*1).skip((page-1)*limit).toArray()
+            resolve(webSeries)
+        })
+    },
     getOtherMovies:(req,res)=>{
         return new Promise(async(resolve,reject)=>{
             const {page=1,limit=30}=req.query;

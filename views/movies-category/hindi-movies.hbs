@@ -6,44 +6,55 @@
         <ul>
           <span>Movies</span>
           <div class="nav-swiper">
-          <li><a href="/">Home</a></li>
-          <li><a href="/malayalam-movies">Malayalam</a></li>
-          <li><a href="/tamil-movies">Tamil</a></li>
-          <li><a href="/hindi-movies">Hindi</a></li>
-          <li><a href="/telugu-movies">Telugu</a></li>
-          <li><a href="/hollywood-movies">Hollywood</a></li>
-          <li><a href="/other-movies">Other</a></li>
-          <li><a href="/actors">Actors</a></li>
+          <li><a href="/" title="Home Page">Home</a></li>
+          <li><a href="/malayalam-movies" title="Malayalam Movies Page">Malayalam</a></li>
+          <li><a href="/tamil-movies" title="Tamil Movies Page">Tamil</a></li>
+          <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
+          <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
+          <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
+          <li><a href="/web-series" title="Web Series">Web Series</a></li>
+          <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
+          <li><a href="/actors" title="Actor Section">Actors</a></li>
         </div>
         </ul>
       </div>
- 
- <div class="black-header">
-      <i class="material-icons">movie</i>
-      Hindi Movies
-    </div>
 
-    <table class="table-upcoming-list">
-      <tr class="wrap">
-        {{#each hindiMovies}}
-
-          <td class="up-listt">
-            
-            <div class="movie-mega-card">
-              <a href="/movie/{{this._id}}">
-                <div class="movie-card">
-                  <img src="/images/movie-posters/{{this._id}}.jpg" class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="movie-card-title">{{this.name}}</h5>
-                    <span class="movie-card-info"><h5>{{this.releasedate}}</h5></span>
-                  </div>
-                </div>
-              </a>
+      
+<div class="black-header"> <i class="fas fa-bolt"></i><h2>Latest Update</h2></div>
+<div class="swiper">
+      <div class="latest-movies-section">
+       {{#each latestupdatemovies}}
+          <a href="/movie/{{this._id}}" class="movies-list-latestupdate"title="{{this.name}} Movie Details">
+            <div class="movies-img-latestupdate">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.name}} Poster" srcset="">
             </div>
-          </td>
-
+          <div class="movies-body-latestupdate">
+            <p>{{this.name}}</p>
+            <h6>( {{this.engname}} )</h6>
+          </div>  
+          </a>
         {{/each}}
-      </tr>
-
-    </table>
- 
+      </div>
+</div>
+       <!---------------------------------Hindi MOVies--------------------------------------------->
+    <div class="black-header"><i class="fas fa-video"></i> <h1>Hindi Movies</h1></div>
+      <div class="movies-section">
+        {{#each hindiMovies}}
+          <a href="/movie/{{this._id}}" class="movies-list">
+            <div class="movies-img">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.engname}} poster" srcset="">
+            </div>
+          <div class="movies-body">
+            <h3>{{this.name}}</h3>
+            <p>{{this.year}}</p>
+          </div> 
+          </a>
+        {{/each}}
+      </div>
+<div class="pages">
+      <div class="basic-head">
+        <p>Pages</p>
+      </div>
+      <a href="?page=2&limit=30" title="Page 2">2</a>
+      <a href="?page=3&limit=30" title="Page 3">3</a>
+</div>

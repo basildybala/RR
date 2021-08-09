@@ -11,24 +11,27 @@
     <!-- <a href="#" class="connect-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
   </div>
 </div>
-<!--------------------------------Movies Categories Swipe---------------------->
+ <!--------------------------------Movies Categories Swipe---------------------->
       <div class="nav-bar-sticky ">
         
         <ul>
           <span>Movies</span>
           <div class="nav-swiper">
-          <li><a href="/">Home</a></li>
-          <li><a href="/malayalam-movies">Malayalam</a></li>
-          <li><a href="/tamil-movies">Tamil</a></li>
-          <li><a href="/hindi-movies">Hindi</a></li>
-          <li><a href="/telugu-movies">Telugu</a></li>
-          <li><a href="/hollywood-movies">Hollywood</a></li>
-          <li><a href="/other-movies">Other</a></li>
-          <li><a href="/actors">Actors</a></li>
+          <li><a href="/" title="Home Page">Home</a></li>
+          <li><a href="/malayalam-movies" title="Malayalam Movies Page">Malayalam</a></li>
+          <li><a href="/tamil-movies" title="Tamil Movies Page">Tamil</a></li>
+          <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
+          <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
+          <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
+          <li><a href="/web-series" title="Web Series">Web Series</a></li>
+          <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
+          <li><a href="/actors" title="Actor Section">Actors</a></li>
         </div>
         </ul>
       </div>
      <!-----------------------------------Latest Update------------------------------------------>
+
+
     <div class="black-header">
       <i class="fas fa-pen-alt"></i>
       Latest Update
@@ -38,7 +41,7 @@
         {{#each latestupdatemovies}}
         <a href="/movie/{{this._id}}" class="movies-list">
           <div class="movies-img">
-            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="{{this.name}}.jpg" srcset="">
           </div>
         <div class="movies-body">
           <p>{{this.name}}</p>
@@ -59,13 +62,13 @@
     <img
       data-src="/images/movie-posters/{{movie._id}}a.jpg"
       class="backimg lazy-photo"
-      alt=""
+      alt="{{movie.name}}.jpg"
     />
     <a href="/images/movie-posters/{{movie._id}}.jpg">
       <img
         data-src="/images/movie-posters/{{movie._id}}.jpg"
         class="movie-cover lazy-photo"
-        alt=""
+        alt="{{movie.name}}coverimage.jpg"
       /></a>
     <div class="trailor-btn">
       <div class="fa-trailor">
@@ -132,12 +135,12 @@
               <div class="share-link">
                 <h6>Share:</h6>
                 <a
-                  href="tg://msg?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   "
+                  href="tg://msg?text=🎥  {{movie.name}} ({{movie.engname}}), {{movie.category}} Movie Review Cast&Crew   ▶️ https://dramalite.com/movie/{{movie._id}}   "
                   data-action="share/tg/share"
                   class="share-telegram"
                 ><i class="fa fa-telegram" aria-hidden="true"></i></a>
                 <a
-                  href="whatsapp://send?text=🎥 Lets Go   Read full Story ▶️http://mrharshid.tk   Dramalite"
+                  href="whatsapp://send?text=🎥  {{movie.name}} ({{movie.engname}}), {{movie.category}} Movie Review Cast&Crew   ▶️ https://dramalite.com/movie/{{movie._id}}"
                   data-action="share/whatsapp/share"
                   class="share-whatsapp"
                 ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
@@ -186,7 +189,7 @@
         <a href="/actor/{{movie.actid1}}"><img
             class="lazy-photo"
             data-src="/images/actor-posters/{{movie.actid1}}.jpg"
-            alt=""
+            alt="{{movie.actorname1}}.jpg"
           />
           <h6>{{movie.actorname1}}</h6>
           <p>{{movie.mvactorname1}}</p>
@@ -197,7 +200,7 @@
           <a href="/actor/{{movie.actid2}}"><img
               class="lazy-photo"
               data-src="/images/actor-posters/{{movie.actid2}}.jpg"
-              alt=""
+              alt="{{movie.actorname1}}actor2.jpg"
             />
             <h6>{{movie.actorname2}}</h6>
             <p>{{movie.mvactorname2}}</p>
@@ -209,7 +212,7 @@
           <a href="/actor/{{movie.actid3}}"><img
               class="lazy-photo"
               data-src="/images/actor-posters/{{movie.actid3}}.jpg"
-              alt=""
+              alt="{{movie.actorname1}}actor3.jpg"
             />
             <h6>{{movie.actorname3}}</h6>
             <p>{{movie.mvactorname3}}</p>
@@ -221,7 +224,7 @@
           <a href="/actor/{{movie.actid4}}"><img
               class="lazy-photo"
               data-src="/images/actor-posters/{{movie.actid4}}.jpg"
-              alt=""
+              alt="{{movie.actorname1}}actor4.jpg"
             />
             <h6>{{movie.actorname4}}</h6>
             <p>{{movie.mvactorname4}}</p>
@@ -233,7 +236,7 @@
           <a href="/actor/{{movie.actid5}}"><img
               class="lazy-photo"
               data-src="/images/actor-posters/{{movie.actid5}}.jpg"
-              alt=""
+              alt="{{movie.actorname1}}actor5.jpg"
             />
             <h6>{{movie.actorname5}}</h6>
             <p>{{movie.mvactorname5}}</p>

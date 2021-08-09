@@ -11,22 +11,22 @@ const verifyAdmin=(req,res,next)=>{
   }
 }
 //BASIC PAGE ADMIN
-router.get('/', function(req, res, next) {
+router.get('/',verifyAdmin, function(req, res, next) {
   // let admin=req.session.admin
   res.render('admin/basic-section');
 });
 
 
 //ACTOR SECTION
-router.get('/show-actor', function(req, res, next) {
+router.get('/show-actor',verifyAdmin, function(req, res, next) {
   movieHelpers.getAllActor().then((actor)=>{
     res.render('admin/show-actor',{actor});
   })
   
 });
 //ACTOR ADD
-// router.get('/add-actor',verifyAdmin, function(req, res, next) {
-router.get('/add-actor', function(req, res, next) {
+router.get('/add-actor',verifyAdmin, function(req, res, next) {
+// router.get('/add-actor', function(req, res, next) {
   res.render('admin/add-actor');
 });
 // router.post('/add-actor',(req,res)=>{
@@ -61,7 +61,7 @@ router.post('/add-actor',(req,res)=>{
   })
 })
 //EDIT ACTOR
-router.get('/edit-actor/:id',async (req,res)=>{
+router.get('/edit-actor/:id',verifyAdmin,async (req,res)=>{
   
   let actor=await movieHelpers.getOneActor(req.params.id)
   
@@ -80,7 +80,7 @@ router.post('/edit-actor/:id',(req,res)=>{
   })
 })
 //DELETE ACTOR
-router.get('/delete-actor/:id',(req,res)=>{
+router.get('/delete-actor/:id',verifyAdmin,(req,res)=>{
   let actorId=req.params.id
   movieHelpers.deleteActor(actorId).then((response)=>{
     res.redirect('/admin/show-actor')
@@ -90,7 +90,7 @@ router.get('/delete-actor/:id',(req,res)=>{
 
 //MOVIES SECTION--------------------------------------------------------
 
-router.get('/show-admin-movies', function(req, res, next) {
+router.get('/show-admin-movies',verifyAdmin, function(req, res, next) {
   console.log(req.params.id);
   movieHelpers.getAllMovies().then((movies)=>{
     res.render('admin/show-movies',{movies});
@@ -99,7 +99,7 @@ router.get('/show-admin-movies', function(req, res, next) {
 
 });
 //ADD MOVIE
-router.get('/add-movies', function(req, res, next) {
+router.get('/add-movies',verifyAdmin, function(req, res, next) {
   
   res.render('admin/add-movies');
 });
@@ -122,7 +122,7 @@ router.post('/add-movies',(req,res)=>{
 });
 
 //EDIT MOVIE
-router.get('/edit-movies/:id',async (req,res)=>{
+router.get('/edit-movies/:id',verifyAdmin,async (req,res)=>{
   console.log(req.params.id);
   let movie=await movieHelpers.getOneMovie(req.params.id)
   res.render('admin/edit-movies',{movie})
@@ -147,7 +147,7 @@ router.post('/edit-movies/:id',(req,res)=>{
 
 
 //DELETE MOviE
-router.get('/delete-movies/:id',(req,res)=>{
+router.get('/delete-movies/:id',verifyAdmin,(req,res)=>{
   let moviesId=req.params.id
   movieHelpers.deleteMovies(moviesId).then((response)=>{
     res.redirect('/admin/show-admin-movies')
@@ -160,22 +160,22 @@ router.get('/add-images',(req, res) => {
   res.render('admin/images-section/add-images');
 });
 
-router.post('/add-images',(req,res)=>{
+// router.post('/add-images',(req,res)=>{
   
-    let movieposter=req.files.image
-    movieposter.mv("./public/images/filmimages/.jpg",(err,done)=>{
-      if(!err){
-        res.render("admin/image-section/add-images")
-      }else{
-        console.log(err);
-      }
+//     let movieposter=req.files.image
+//     movieposter.mv("./public/images/filmimages/.jpg",(err,done)=>{
+//       if(!err){
+//         res.render("admin/image-section/add-images")
+//       }else{
+//         console.log(err);
+//       }
     
     
-  })
-});
+//   })
+// });
 //NEXT WEEK MOVIES------------------------------------------
 //SHOW
-router.get('/show-nextweek-movies', function(req, res, next) {
+router.get('/show-nextweek-movies',verifyAdmin, function(req, res, next) {
   movieHelpers.getAllNextweek().then((nextweek)=>{
     res.render('admin/next-week/show-nextweek',{nextweek});
   })
@@ -183,7 +183,7 @@ router.get('/show-nextweek-movies', function(req, res, next) {
 
 });
 //ADD
-router.get('/add-nextweek-movies', function(req, res, next) {
+router.get('/add-nextweek-movies',verifyAdmin, function(req, res, next) {
   
   res.render('admin/next-week/add-nextweek');
 });
@@ -194,7 +194,7 @@ router.post('/add-nextweek-movies',(req,res)=>{
   })
 });
 //EDIT
-router.get('/edit-nextweek/:id',async (req,res)=>{
+router.get('/edit-nextweek/:id',verifyAdmin,async (req,res)=>{
   let nextweek=await movieHelpers.getOneNextweek(req.params.id)
   res.render('admin/next-week/edit-nextweek',{nextweek})
 });
@@ -225,7 +225,7 @@ loginHelpers.doLogin(req.body).then((response)=>{
   if(response.status){
     req.session.loggedIn=true
     req.session.admin=response.admin
-    res.redirect('basic')
+    res.redirect('/admin')
   }else{
     res.redirect('/')
   }

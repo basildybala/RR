@@ -1,4 +1,4 @@
-<title>Telugu (തെലുഗ്   സിനിമകൾ ) Latest Full Movies Download Review nd Trailor Free</title>
+<title>Telugu Dubbed Malayalam Movies in മലയാളം -Dramalite</title>
 
 <section>
 <!--------------------------------Movies Categories Swipe---------------------->
@@ -39,6 +39,63 @@
         {{/each}}
       </div>
 
+ <!--------------------------------Movies Categories Swipe---------------------->
+      <div class="nav-bar-sticky ">
+        
+        <ul>
+          <span>Movies</span>
+          <div class="nav-swiper">
+          <li><a href="/" title="Home Page">Home</a></li>
+          <li><a href="/malayalam-movies" title="Malayalam Movies Page">Malayalam</a></li>
+          <li><a href="/tamil-movies" title="Tamil Movies Page">Tamil</a></li>
+          <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
+          <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
+          <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
+          <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
+          <li><a href="/actors" title="Actor Section">Actors</a></li>
+        </div>
+        </ul>
+      </div>
+
+      
+<div class="black-header"> <i class="fas fa-bolt"></i><h2>Latest Update</h2></div>
+<div class="swiper">
+      <div class="latest-movies-section">
+       {{#each latestupdatemovies}}
+          <a href="/movie/{{this._id}}" class="movies-list-latestupdate"title="{{this.name}} Movie Details">
+            <div class="movies-img-latestupdate">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.name}} Poster" srcset="">
+            </div>
+          <div class="movies-body-latestupdate">
+            <p>{{this.name}}</p>
+            <h6>( {{this.engname}} )</h6>
+          </div>  
+          </a>
+        {{/each}}
+      </div>
+</div>
+       <!---------------------------------Telugu MOVies--------------------------------------------->
+    <div class="black-header"><i class="fas fa-video"></i> <h1>Telugu Movies</h1></div>
+      <div class="movies-section">
+        {{#each teluguMovies}}
+          <a href="/movie/{{this._id}}" class="movies-list">
+            <div class="movies-img">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.engname}} poster" srcset="">
+            </div>
+          <div class="movies-body">
+            <h3>{{this.name}}</h3>
+            <p>{{this.year}}</p>
+          </div> 
+          </a>
+        {{/each}}
+      </div>
+<div class="pages">
+      <div class="basic-head">
+        <p>Pages</p>
+      </div>
+      <a href="?page=2&limit=30" title="Page 2">2</a>
+      <a href="?page=3&limit=30" title="Page 3">3</a>
+</div>
 
   
 

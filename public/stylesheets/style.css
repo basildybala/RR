@@ -91,12 +91,28 @@ body{
 }
 .black-header i {
     margin-right: 5px;
+    font-size: 20px;
+}
+.black-header h1{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.black-header h2{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 .white-link{
     height: 30px;
     width: 100%;
-    border-bottom: 1px solid black   
+    border-bottom: 1px solid black ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .dflexx{
@@ -109,6 +125,21 @@ body{
 }
 .dflexx i{
     color: rgb(252, 54, 19);
+    font-size: larger;
+    margin-right: 4px;
+}
+/*Pages*/
+.pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pages a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 2px;
+    color: rgb(252, 54, 19);
+    font-weight: bold;
 }
 
 /*Movie section*/
@@ -131,6 +162,7 @@ body{
     height: 235px;
     width: 100%;
     border-radius: 20px;
+    object-fit: cover;
    
 }
 .movie-img img{
@@ -185,10 +217,10 @@ body{
    font-size: 10px; 
 }
 .movies-malayalam-header{
-    margin-left: 160px;
+    margin-left: 165px;
     text-transform: capitalize;
     margin-top: 15px;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
     font-size: 1.6rem;
     font-family: sans-serif;
     display: flex;
@@ -600,27 +632,27 @@ margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 120px;
+    width: 110px;
     margin: 8px 6px;
-    height: 174px;
+    height: 175px;
     border: 1px solid rgba(0,0,0,.14);
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     background: white;
     
 }
 .movies-img{
-    width: 120px;
+    width: 110px;
 }
 .movies-img img{
     width: 100%;
-    height:135px ;
+    height: 139px;
     object-fit: cover;
 }
 .movies-body{
     text-align: center;
 }
-.movies-body p{
-    margin: 3px 0px;
+.movies-body h3{
+    margin: 1px 0px;
     color: black;
     font-family: 'manjari';
     font-weight: 600;
@@ -633,6 +665,12 @@ margin: 2px;
     font-family: 'Varela Round';
     font-weight: 400;
     font-size: 9px;
+}
+.movies-body p{
+    margin: 1px 0;
+    font-size: 11px;
+    color: black;
+    font-family: 'Varela Round';
 }
 /*Latest Update Movies*/
 .movies-list-latestupdate{
@@ -1118,8 +1156,21 @@ margin: 2px;
     margin-left: 5px;
     margin-right: 5px;
 }
+.contact-email-link a{
+    font-size: 17px;
+    text-decoration: none;
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.contact-email-link{
+    margin: 10px;
+}
 
 @media(min-width: 767px){
+    body{
+        margin: 0 15%;
+    }
     .site-logo img{
         width: 61%;
         height: 133px;
@@ -1149,10 +1200,12 @@ margin: 2px;
         margin-right: 5px;
     }
     
-    
+    .movies-img{
+        width: 100%;
+    }
     .movies-img img{
         width: 100%;
-        height:161px ;
+        height: 190px ;
         object-fit: cover;
     }
     .movies-list{
@@ -1160,7 +1213,7 @@ margin: 2px;
         flex-direction: column;
         align-items: center;
         width: 150px;
-        height: 200px;
+        height: 230px;
         margin: 10px 9px;
         
     }
@@ -1213,12 +1266,17 @@ margin: 2px;
         font-size: 25px;
     }
   .backimg{
-    height: 390px;  
+    height: 460px;  
 }
 .movie-cover{
     height: 250px;
     max-width: 175px;
     bottom: -75px;
+}
+.movies-malayalam-header{
+    margin-left: 230px;
+    margin-bottom: 50px;
+    font-size: 40px;
 }
 .movies-list-latestupdate{
     display: flex;
