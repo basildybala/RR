@@ -1,17 +1,19 @@
+<title>Edit Movies</title>
 <div class="add-movies-section">
-        <div class="nav-bar-sticky ">
+          <div class="nav-bar-sticky ">
         
         <ul>
-          <span>Movies</span>
+          <span>Header</span>
           <div class="nav-swiper">
           <li><a href="/">Home</a></li>
-          <li><a href="/malayalam-movies">Malayalam</a></li>
-          <li><a href="/tamil-movies">Tamil</a></li>
-          <li><a href="/hindi-movies">Hindi</a></li>
-          <li><a href="/telugu-movies">Telugu</a></li>
-          <li><a href="/hollywood-movies">Hollywood</a></li>
-          <li><a href="/other-movies">Other</a></li>
-          <li><a href="/actors">Actors</a></li>
+          <li><a href="/admin">Admin Home</a></li>
+          <li><a href="/admin/show-admin-movies">Show All Movies Admin</a></li>
+          <li><a href="/admin/add-movies">Add Movies</a></li>
+          <li><a href="/admin/show-actor">Show All Actors</a></li>
+          <li><a href="/admin/add-actor">Add Actor</a></li>
+          <li><a href="/admin/add-nextweek-movies">Add Next Week</a></li>
+          <li><a href="/admin/add-nextweek-movies">Show Next Week Movies</a></li>
+         
         </div>
         </ul>
       </div>
@@ -56,6 +58,11 @@
                     <label class="fm-details">
                         Release Date : </label>
                     <input type="text" name="releasedate" value="{{movie.releasedate}}" >
+                </div>
+                 <div class="input-section">
+                    <label class="fm-details">
+                        Release Year : </label>
+                    <input type="text" name="year" value="{{movie.year}}" >
                 </div>
                 <div class="input-section">
                     <label class="fm-details">

@@ -197,6 +197,10 @@ body{
     align-items: center;
     justify-content: center;
 }
+.fa-playy i{
+    margin-top: 10px;
+    margin-right: -3px;
+}
 .fa-trailor{
     position: absolute;
     width: 84px;
@@ -235,42 +239,6 @@ body{
     color: rgb(0 0 0 / 70%);
     font-family: 'manjari';
 }
-/* 
-.head11{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-}
-.head111{
-    width: 110px;
-}
-.head111 p{
-    
-    font-size: 0.8em;
-    margin: 0;
-    font-weight: 700;
-    
-    color: rgb(252, 54, 19);
-    font-family: 'Varela Round', sans-serif;
-    
-}
-
-
-
-.head1111{
-    margin: 6px 0;
-    width: 110px;
-}
-.head1111 p{
-    color: rgb(0 0 0 / 53%);
-    font-family: sans-serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    margin-top: 10px;
-    margin: 0;
-} */
-
 /*Video Secton*/
 
 .video-row{
@@ -334,37 +302,12 @@ body{
     color: rgb(255, 255, 255);
     font-family: 'Varela Round', sans-serif;
 }
-/* .head3{
-    display: flex;
-    margin: 7px 4px;
-    align-items: center;
-}
-.head3 p{
-    color: rgb(0,0,0,0.7);
-    font-family: sans-serif;
-    font-size: 0.9em;
-    font-weight: 600; 
-}
-.head3 h5{
-    color: rgba(17, 16, 16, 0.7);
-    font-family: sans-serif;
-    font-size: 0.8em;
-} */
 .movie-story{
     width: 100%;
     margin: auto;
     position: relative;
     height: auto;
 }
-/* .story-h p{
-    color: rgb(252, 54, 19);
-    font-family: 'Varela Round', sans-serif;
-    font-size: 0.8em; 
-    font-weight: 600; 
-    margin-bottom: 0;
-    margin-top: 5px;
-    
-} */
 .story-p{
     width: 100%;
 }
@@ -376,6 +319,8 @@ body{
     margin-left: 8px;
     margin-top: 4px;
     margin-bottom: 0px;
+    line-height: 19px;
+    letter-spacing: 1px;
 }
 .image-section{
     border-bottom: rgb(209, 207, 207) solid;
@@ -482,76 +427,6 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-/*Movie card*/
-.movie-mega-card{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: center;
-  }
-  .movie-mega-card a{
-    text-decoration: none;
-  }
-  .movie-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    margin:14px; 
-    width: 160px;
-    border-radius: 10px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
-  }
-  .movie-card img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 12rem;
-     width: 100%;
-  }
-  .movie-card-title{
-    text-align: center;
-    font-family: sans-serif;
-      font-weight: 700;
-      font-size: 0.8em;
-      color: rgb(235, 0, 0);
-  }
-  .movie-card-info{
-    font-size: 0.7em;
-    text-align: center;
-    margin-top: 9px;
-  }
-  .card-body{
-    margin-top: 5px;
-    height: 30px;
-    background-color: white;
-  }
-  .actor-card img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 6rem;
-     width: 100%;
-  }
-  .actor-card{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 9rem;
-     width: 100px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    margin:14px; 
-    width: 124px;
-    border-radius: 10px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
-  }
-  .card-body h5{
-margin: 2px;
-  }
-
   /*ADMIN MOVIES LIST*/
   .admin-header{
     background-color: black;
@@ -634,7 +509,7 @@ margin: 2px;
     align-items: center;
     width: 110px;
     margin: 8px 6px;
-    height: 175px;
+    height: 185px;
     border: 1px solid rgba(0,0,0,.14);
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     background: white;
@@ -659,17 +534,30 @@ margin: 2px;
     font-size: 14px;
     
 }
-.movies-body h6{
+.movies-body h5{
     margin: 0px;
     color: black;
     font-family: 'Varela Round';
     font-weight: 400;
+    font-size: 7px;
+}
+.movies-body h4{
+    margin: 1px 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: black;
+    font-family: 'Varela Round';
+}
+.movies-body h6{
+    margin: 1px 0;
     font-size: 9px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: black;
 }
 .movies-body p{
     margin: 1px 0;
     font-size: 11px;
-    color: black;
     font-family: 'Varela Round';
 }
 /*Latest Update Movies*/
@@ -679,7 +567,7 @@ margin: 2px;
     align-items: center;
     width: 90px;
     margin: 2px 2px;
-    height: 142px;
+    height: 148px;
     border: 1px solid rgba(0,0,0,.14);
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     background: white;
@@ -703,12 +591,19 @@ margin: 2px;
     font-weight: 600;
     font-size: 12px;   
 }
-.movies-body-latestupdate h6{
+.movies-body-latestupdate h5{
     margin: 0px;
     color: black;
     font-family: 'Varela Round';
     font-weight: 400;
     font-size: 8px;   
+}
+.movies-body-latestupdate h6{
+    margin: 1px 0;
+    font-size: 9px;
+    font-family: 'Varela Round';
+    color: black;
+    font-weight: 400;
 }
 /*ACTOR SWAP*/
 .swiper{
@@ -849,14 +744,12 @@ margin: 2px;
    font-size: 13px;
    font-weight: 500;
    border-radius: 5px;
-
   }
   
   
   .nav-swiper::-webkit-scrollbar{
     display: none;
   }
-
   /*ACTOR FILM*/
   .movies-english-header{
     width: 100%;
@@ -864,12 +757,14 @@ margin: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(76 71 71);
+    border: 3px solid #443c3c;
+  }
+  .movies-english-header h1{
     color: #f9f9f9;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    background-color: rgb(76 71 71);
-    border: 3px solid #443c3c;
   }
   .actor-film{
       display: flex;
@@ -878,14 +773,22 @@ margin: 2px;
 
   }
   .actor-film-card{
-      width: 110px;
-      height: 150px;
-    margin: 5px 5px;
+    width: 90px;
+    margin: 2px 2px;
+    height: 142px;
+    border: 1px solid rgba(0,0,0,.14);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    background: white;
+  }
+  .actor-film-card h5{
+    margin: 2px;
+    font-size: 11px;
+    font-family: 'Varela Round';
   }
   .actor-film-card img{
-      width: 100%;
-      height: 137px;
-      
+    width: 100%;
+    height: 95px;
+    object-fit: cover;   
   }
   .actor-film-card h6{
     margin: 0;
@@ -1284,7 +1187,7 @@ margin: 2px;
     align-items: center;
     width: 107px;
     margin: 3px 3px;
-    height: 160px;
+    height: 171px;
     
 }
 .movies-img-latestupdate{

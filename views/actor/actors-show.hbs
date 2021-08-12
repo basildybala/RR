@@ -1,43 +1,15 @@
-<section>
-
-
-    <div class="upcoming-section">
-        <div class="black-header"> <i class="material-icons">movie</i> Malayalam Movies </div>
-
-        <table class="table-upcoming-list">
-            <tr class="wrap">
-                {{#each actor}}
-
-                <td class="uplist1">
-                   
-                     <div class="movie-mega-card">
+{{!-- 
+        <div class="black-header"> <i class="material-icons">movie</i> <h1>Actors</h1></div>
+        <div class="actors-section">
+            {{#each actor}}
               <a href="/actor/{{this._id}}">
                 <div class="actor-card">
                   <img src="/images/actor-posters/{{this._id}}.jpg" class="card-img-top" alt="..." />
                   <div class="card-body">
-                    <h5 class="movie-card-title">{{this.actorname}}</h5>
-                    <span class="movie-card-info"><h5>{{this.language}}</h5></span>
+                    <h5>{{this.actorname}}</h5>
+                    <h6>{{this.language}}</h6>
                   </div>
                 </div>
               </a>
-            </div>
-                </td>
-
-
-                {{/each}}
-            </tr>
-
-
-
-
-
-
-        </table>
-    </div>
-
-
-
-
-
-
-</section>
+            {{/each}}
+        </div> --}}

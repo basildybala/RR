@@ -40,6 +40,7 @@ module.exports={
                     category:movieDetails.category,
                     trending:movieDetails.trending,
                     releasedate:movieDetails.releasedate,
+                    year:movieDetails.year,
                     readmorestory:movieDetails.readmorestory,
                     director:movieDetails.director,
                     producedby:movieDetails.producedby,

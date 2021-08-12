@@ -1,8 +1,6 @@
 <title>Best of Malayalam Movies &Comedy in മലയാളം-Dramalite</title>
 <meta name="description" content="Malayalam Movies Comedy Action all and Release Date Reviews Videos  Cast&Crew  Film Poster Full On മലയാളം Free Download">
 
-
-
 <section>
   <!--------------------------------Movies Categories Swipe---------------------->
       <div class="nav-bar-sticky ">
@@ -16,8 +14,8 @@
           <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
           <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
           <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
+          <li><a href="/hollywood-movies" title="Web Series Page">WebSeries</a></li>
           <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
-          <li><a href="/actors" title="Actor Section">Actors</a></li>
         </div>
         </ul>
       </div>
@@ -45,7 +43,7 @@
         {{#each malayalamMovies}}
           <a href="/movie/{{this._id}}" class="movies-list">
             <div class="movies-img">
-              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.engname}} poster" srcset="">
+              <img data-src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.engname}} poster" class="lazy-photo" >
             </div>
           <div class="movies-body">
             <h3>{{this.name}}</h3>

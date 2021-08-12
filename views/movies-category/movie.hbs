@@ -1,4 +1,28 @@
- <title>{{movie.engname}}({{movie.releasedate}}).({{movie.name}}){{movie.category}} Cast & Crew, Release Date, Review, Photos, Videos HD Full Movie Download -Dramalite.Com</title>
+<meta property="og:title" content="{{movie.engname}}({{movie.year}}).{{movie.name}}">
+<meta property="og:site_name" content="DramaLite.Com ">
+<meta property="og:url" content="https://dramalite.com/movie/{{movie._id}}">
+<meta property="og:description" content="Language:{{movie.category}}, Duration:{{movie.duration}}, Story:{{movie.story}}">
+<meta property="og:type" content="video.movie">
+<meta property="og:image" content="https://dramalite.com/images/movie-posters/{{movie._id}}.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Movie",
+  "name": "hgh",
+  "url": "https://dramalite.com/movie/{{movie._id}}",
+  "image": "https://dramalite.com/images/movie-posters/{{movie._id}}.jpg",
+  "dateCreated": "{{movie.year}}",
+  "director": "{{movie.director}}",
+  "inLanguage":"{{movie.category}}",
+  "description":"{{movie.story}}",
+  "actor":[{"@type":"Person", "url":"/actor/{{movie.actid1}}","name":"{{movie.actorname1}}"},
+           {"@type":"Person","url":"/actor/{{movie.actid2}}","name":"{{movie.actorname2}}"}]
+
+}
+</script>
+ 
+<title>{{movie.engname}}({{movie.year}}).({{movie.name}}){{movie.category}} Cast & Crew, Release Date, Review, Photos, Videos HD Full Movie Download -Dramalite.Com</title>
 
 <!--------------------------------Connect Join Family-------------------------->
 <div class="connect-with">
@@ -6,14 +30,13 @@
     Join The Family:
   </div>
   <div class="connect-with-link">
-    <a href="https://www.instagram.com/dramalitecom/" class="connect-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/dramalitecom" class="connect-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     <a href="https://t.me/dramalite" class="connect-telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
     <!-- <a href="#" class="connect-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
   </div>
 </div>
  <!--------------------------------Movies Categories Swipe---------------------->
-      <div class="nav-bar-sticky ">
-        
+      <div class="nav-bar-sticky ">      
         <ul>
           <span>Movies</span>
           <div class="nav-swiper">
@@ -23,15 +46,12 @@
           <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
           <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
           <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
-          <li><a href="/web-series" title="Web Series">Web Series</a></li>
+          <li><a href="/web-series" title="Web Series">WebSeries</a></li>
           <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
-          <li><a href="/actors" title="Actor Section">Actors</a></li>
         </div>
         </ul>
       </div>
      <!-----------------------------------Latest Update------------------------------------------>
-
-
     <div class="black-header">
       <i class="fas fa-pen-alt"></i>
       Latest Update
@@ -39,25 +59,22 @@
     <div class="swiper">
       <div class="latest-movies-section">
         {{#each latestupdatemovies}}
-        <a href="/movie/{{this._id}}" class="movies-list">
+        <a href="/movie/{{this._id}}" class="movies-list" title="{{this.engname}} Page">
           <div class="movies-img">
             <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="{{this.name}}.jpg" srcset="">
           </div>
         <div class="movies-body">
-          <p>{{this.name}}</p>
-          <h6>( {{this.engname}} )</h6>
+          <h4>{{this.name}}</h4>
+          <h5>{{this.engname}}</h5>
+          <h6>{{this.category}}</h6>
         </div>  
-        
         </a>
         {{/each}}
       </div>
     </div>
- 
-
-
     <!-----------------------------------MOVIES SECTION----------------------->
 <div class="main">
-  <div class="movies-english-header">{{movie.engname}}</div>
+  <div class="movies-english-header"><h1>{{movie.engname}}</h1></div>
   <div class="movies-images">
     <img
       data-src="/images/movie-posters/{{movie._id}}a.jpg"
@@ -74,15 +91,12 @@
       <div class="fa-trailor">
         {{#if movie.yttrailorlink}}
           <p> Watch Trailor</p>
-
         {{else}}
-
           <p> Trailor Notyet</p>
         {{/if}}</div>
       <div class="fa fa-playy"> <i class="fa fa-play"></i> </div></div>
     <div class="video-container">
       <span class="close"> &#10006; </span>
-
       <iframe
         class="lazy-photo"
         data-src="{{movie.yttrailorlink}}"
@@ -91,9 +105,7 @@
         allowfullscreen
       ></iframe>
     </div>
-
   </div>
-
   <div class="movies-malayalam-header"><i class="fas fa-star"></i><h6
     >{{movie.name}}</h6></div>
 
@@ -101,8 +113,7 @@
     <div class="basic-head">
             <h4>Details</h4>
           </div>
-          <div class="details">
-            
+          <div class="details">           
             <div class="details-col">
               <h5>Language:</h5>
               <p>{{movie.category}}</p>
@@ -130,25 +141,22 @@
               <h5>Length:</h5>
               <p>{{movie.duration}}</p>
             </div>
-            <div class="details-col">
-              
+            <div class="details-col">   
               <div class="share-link">
                 <h6>Share:</h6>
                 <a
-                  href="tg://msg?text=🎥  {{movie.name}} ({{movie.engname}}), {{movie.category}} Movie Review Cast&Crew   ▶️ https://dramalite.com/movie/{{movie._id}}   "
+                  href="tg://msg?text= https://dramalite.com/movie/{{movie._id}}   "
                   data-action="share/tg/share"
                   class="share-telegram"
                 ><i class="fa fa-telegram" aria-hidden="true"></i></a>
                 <a
-                  href="whatsapp://send?text=🎥  {{movie.name}} ({{movie.engname}}), {{movie.category}} Movie Review Cast&Crew   ▶️ https://dramalite.com/movie/{{movie._id}}"
+                  href="whatsapp://send?text= https://dramalite.com/movie/{{movie._id}}"
                   data-action="share/whatsapp/share"
                   class="share-whatsapp"
                 ><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
               </div>  
             </div>
           </div>
-
-
 <!----------------Story------------->
  <div class="movie-story">
             <div class="basic-head">
@@ -158,11 +166,8 @@
               <p>
                {{movie.story}}
               </p>
-              
              <div class="story-readmore-english">
-            
                 <span class="closee-english"> &#10006; </span>
-                
                 <p>
                  {{movie.storyenglish}}
                 </p>
@@ -179,14 +184,13 @@
              {{movie.readmorestory}}
           </p>
      </div>
-
   </div>
 <!----------------Actors-->
   <div class="basic-head"><h4>Actors</h4></div>
   <div class="swiper">
     <div class="actor-swp">
       <div class="actorswp">
-        <a href="/actor/{{movie.actid1}}"><img
+        <a href="/actor/{{movie.actid1}}" title="{{movie.actorname1}} Page"><img
             class="lazy-photo"
             data-src="/images/actor-posters/{{movie.actid1}}.jpg"
             alt="{{movie.actorname1}}.jpg"
@@ -197,11 +201,8 @@
       </div>
       {{#if movie.actid2}}
         <div class="actorswp">
-          <a href="/actor/{{movie.actid2}}"><img
-              class="lazy-photo"
-              data-src="/images/actor-posters/{{movie.actid2}}.jpg"
-              alt="{{movie.actorname1}}actor2.jpg"
-            />
+          <a href="/actor/{{movie.actid2}}" title="{{movie.actorname2}} Page">
+          <img class="lazy-photo" data-src="/images/actor-posters/{{movie.actid2}}.jpg" alt="{{movie.actorname2}}actor2.jpg"/>
             <h6>{{movie.actorname2}}</h6>
             <p>{{movie.mvactorname2}}</p>
           </a>
@@ -259,10 +260,7 @@
     </div>
 
   </div>
-
-
   <!-------------------------------------VIDEO SECTION------------------------->
-
     <div class="basic-head"><h4>Video</h4> </div>
   <div class="swiper">
      {{#if movie.ytlink}}
@@ -326,15 +324,15 @@
     <div class="swiper">
       <div class="latest-movies-section">
         {{#each trendingmovies}}
-        <a href="/movie/{{this._id}}" class="movies-list">
+        <a href="/movie/{{this._id}}" class="movies-list" title="{{this.engname}} Page">
           <div class="movies-img">
-            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="" srcset="">
+            <img data-src="/images/movie-posters/{{this._id}}.jpg" class="lazy-photo" alt="{{this.engname}} Poster" srcset="">
           </div>
         <div class="movies-body">
-          <p>{{this.name}}</p>
-          <h6>( {{this.engname}} )</h6>
+          <h4>{{this.name}}</h4>
+          <h5>( {{this.engname}} )</h5>
+          <h6>{{this.category}}</h6>
         </div>  
-        
         </a>
         {{/each}}
       </div>
@@ -347,13 +345,14 @@
     <div class="swiper">
       <div class="latest-movies-section">
         {{#each nextweekmovies}}
-        <a href="/movie/{{this.movieid}}" class="movies-list">
+        <a href="/movie/{{this.movieid}}" class="movies-list" title="{{this.moviename}} Page">
           <div class="movies-img">
-            <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="" srcset="">
+            <img data-src="/images/movie-posters/{{this.movieid}}.jpg" class="lazy-photo" alt="{{this.moviename}} Poster" srcset="">
           </div>
         <div class="movies-body">
-          <p>{{this.moviename}}</p>
-          <h6>{{this.moviereleasedate}}</h6>
+          <h4>{{this.moviename}}</h4>
+          <h5>{{this.moviereleasedate}}</h5>
+          <h6>{{this.category}}</h6>
         </div>  
         
         </a>

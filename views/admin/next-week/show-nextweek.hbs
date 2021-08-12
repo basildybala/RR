@@ -1,3 +1,7 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+<title>Show Nextweek Movies</title>
 <table id="sample-table" style="width:100%;text-align:left">
   <thead>
   <tr >
@@ -15,12 +19,8 @@
      <td class="td-class"><input style="width: 90%;" type="text" value="{{this.movieid}}"> </td>
     <td class="td-class">
       
-        <a style="color: green;" href="/admin/edit-nextweek/{{this._id}}"> <i class="material-icons">
-edit
-</i>Edit</a>
-        <a href="/admin/delete-nextweek/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.moviename}}')"><i class="material-icons">
-delete
-</i>Delete</a>
+        <a style="color: green;" href="/admin/edit-nextweek/{{this._id}}"><i class="fas fa-user-edit"></i>Edit</a>
+        <a href="/admin/delete-nextweek/{{this._id}}" onclick="return confirm('Are You SHure to Delete = {{this.moviename}}')"><i class="fas fa-trash"></i>Delete</a>
         
         </td>
   </tr>

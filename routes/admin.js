@@ -12,7 +12,6 @@ const verifyAdmin=(req,res,next)=>{
 }
 //BASIC PAGE ADMIN
 router.get('/',verifyAdmin, function(req, res, next) {
-  // let admin=req.session.admin
   res.render('admin/basic-section');
 });
 
@@ -26,23 +25,9 @@ router.get('/show-actor',verifyAdmin, function(req, res, next) {
 });
 //ACTOR ADD
 router.get('/add-actor',verifyAdmin, function(req, res, next) {
-// router.get('/add-actor', function(req, res, next) {
   res.render('admin/add-actor');
 });
-// router.post('/add-actor',(req,res)=>{
-//   movieHelpers.addActor(req.body,(id)=>{
-//     let actorposter=req.files.image
-   
-//     actorposter.mv("./public/images/actor-posters/" + id + ".jpg",(err,done)=>{
-//       if(!err){
-//         res.render("admin/add-actor")
-//       }else{
-//         console.log(err);
-//       }
-//     })
-  
-//   })
-// })
+
 router.post('/add-actor',(req,res)=>{
   movieHelpers.addActor(req.body,(id)=>{
     let actorposter=req.files.image
@@ -154,25 +139,7 @@ router.get('/delete-movies/:id',verifyAdmin,(req,res)=>{
   })
 });
 
-//ADD IMAGES
-router.get('/add-images',(req, res) => {
-  
-  res.render('admin/images-section/add-images');
-});
 
-// router.post('/add-images',(req,res)=>{
-  
-//     let movieposter=req.files.image
-//     movieposter.mv("./public/images/filmimages/.jpg",(err,done)=>{
-//       if(!err){
-//         res.render("admin/image-section/add-images")
-//       }else{
-//         console.log(err);
-//       }
-    
-    
-//   })
-// });
 //NEXT WEEK MOVIES------------------------------------------
 //SHOW
 router.get('/show-nextweek-movies',verifyAdmin, function(req, res, next) {
@@ -240,7 +207,6 @@ router.get('/97signup', function(req, res, next) {
   res.render('admin/signup');
 });
 router.post('/97signup',(req,res)=>{
-  
   loginHelpers.doSignup(req.body).then((response)=>{
     
   })

@@ -1,5 +1,65 @@
+<meta property="og:title" content="{{actor.actorname}}">
+<meta property="og:site_name" content="DramaLite.Com Actor Section ">
+<meta property="og:url" content="https://dramalite.com/actor/{{actor._id}}">
+<meta property="og:description" content="Language:{{actor.language}}, Age:{{actor.age}}, Biography:{{actor.biography}}">
+<meta property="og:type" content="video.movie">
+<meta property="og:image" content="https://dramalite.com/images/actor-posters/{{actor._id}}.jpg">
+<title>{{actor.actorname}} Movies& Age Birthday All Details in മലയാളം-Dramalite</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "{{actor.actorname}}",
+  "url": "https://dramalite.com/actor/{{actor._id}}",
+  "image": "https://dramalite.com/images/actor-posters/{{actor._id}}.jpg",
+  "sameAs": "{{actor.instalink}}",
+  "jobTitle": "Actors",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Film Industry"
+  }  
+}
+</script>
+
+  <!--------------------------------Movies Categories Swipe---------------------->
+      <div class="nav-bar-sticky ">
+        
+        <ul>
+          <span>Movies</span>
+          <div class="nav-swiper">
+          <li><a href="/" title="Home Page">Home</a></li>
+          <li><a href="/malayalam-movies" title="Malayalam Movies Page">Malayalam</a></li>
+          <li><a href="/tamil-movies" title="Tamil Movies Page">Tamil</a></li>
+          <li><a href="/hindi-movies" title="Hindi Movies Page">Hindi</a></li>
+          <li><a href="/telugu-movies" title="Telugu Movies Page">Telugu</a></li>
+          <li><a href="/hollywood-movies" title="Hollywood Movies Page">Hollywood</a></li>
+          <li><a href="/hollywood-movies" title="Web Series Page">WebSeries</a></li>
+          <li><a href="/other-movies" title="Other Movies Page">Other</a></li>
+          <li><a href="/actors" title="Actor Section">Actors</a></li>
+        </div>
+        </ul>
+      </div>
+
+      
+<div class="black-header"> <i class="fas fa-bolt"></i><h2>Latest Update</h2></div>
+<div class="swiper">
+      <div class="latest-movies-section">
+       {{#each latestupdatemovies}}
+          <a href="/movie/{{this._id}}" class="movies-list-latestupdate"title="{{this.name}} Movie Details">
+            <div class="movies-img-latestupdate">
+              <img src="/images/movie-posters/{{this._id}}.jpg" alt="{{this.name}} Poster" srcset="">
+            </div>
+          <div class="movies-body-latestupdate">
+            <p>{{this.name}}</p>
+            <h6>( {{this.engname}} )</h6>
+          </div>  
+          </a>
+        {{/each}}
+      </div>
+</div>
+
 <div class="actor-section">
-        <div class="actor-header">{{actor.actorname}}</div>
+        <div class="movies-english-header"><h1>{{actor.actorname}}</h1></div>
         <div class="actor-two" style="position: relative;">
             <div class="actor-image">
                 <img src="/images/actor-posters/{{actor._id}}.jpg" alt="">
@@ -42,8 +102,8 @@
             </div>
             
         </div>
-        <div class="basic-head">
-          <h4>{{actor.actorname}} FILMOGRAPHY</h4>
+        <div class="black-header">
+          <h2>{{actor.actorname}} FILMOGRAPHY</h2>
         </div>
         
       
